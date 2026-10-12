@@ -13,15 +13,16 @@ sind realistische Planannahmen.
 | | Status quo | Stationäre Kamera | **Roboter + ML** | Worst Case | Best Case |
 |---|---|---|---|---|---|
 | Investition | – | 250.000 € | **504.900 €** | 600.000 € | 450.000 € |
-| Kosten pro Jahr | 535.000 € | 455.300 € | **297.900 €** | 477.200 € | 169.100 € |
-| Kapitalwert (NPV, 5 Jahre) | – | 50.100 € | **331.500 €** | −339.900 € | 801.100 € |
-| Payback statisch | – | 3,5 Jahre | **2,6 Jahre** | > 5 Jahre | 1,6 Jahre |
-| ROI (Σ Nutzen / Σ Kosten) | – | 124 % | **169 %** | 78 % | 289 % |
+| Kosten pro Jahr | 535.000 € | 490.300 € | **349.200 €** | 530.300 € | 219.800 € |
+| Beanstandete Teile beim Kunden | 100 ppm | 73 ppm | **47 ppm** | 67 ppm | 40 ppm |
+| Kapitalwert (NPV, 5 Jahre) | – | −60.100 € | **170.200 €** | −507.200 € | 641.800 € |
+| Payback statisch | – | > 5 Jahre | **3,2 Jahre** | > 5 Jahre | 1,8 Jahre |
+| ROI (Σ Nutzen / Σ Kosten) | – | 97 % | **143 %** | 61 % | 255 % |
 
 **Empfehlung:** Investition in die robotergestützte Prüfzelle freigeben. Sie ist die einzige
-Variante, die die Kundenanforderung (lückenlose Prüfdokumentation für die E-Plattform) erfüllt
-und gleichzeitig wirtschaftlich ist. Die Erkennungsrate wird vor der Abnahme mit realen
-Fehlteilen nachgewiesen.
+Variante, die die Kundenanforderungen für die E-Plattform (lückenlose Prüfdokumentation,
+höchstens 50 ppm beanstandete Teile) erfüllt und gleichzeitig wirtschaftlich ist. Die
+Erkennungsrate wird vor der Abnahme mit realen Fehlteilen nachgewiesen.
 
 ## Ordnerstruktur
 
@@ -63,6 +64,8 @@ rechnet sich durch die gesamte Datei durch.
 - Kennzahlen: Kapitalwert, interner Zinsfuß, Payback statisch und dynamisch,
   ROI als Σ Nutzen / Σ Kosten sowie als Rückflüsse / Investition
 - Personalbedarf inklusive Reserve für Urlaub, Krankenstand und Schulung
+- Qualität: 15 Reklamationen pro Jahr, davon 10 durch optische Oberflächenfehler. Nur diese
+  kann die Prüfzelle verhindern; Maß-, Dichtheits- und Transportfehler bleiben unverändert
 - Berücksichtigt werden auch Doppelaufwand im Anlauf, Fehlalarme (Pseudoausschuss)
   und manuelle Ersatzprüfung bei Ausfall einer Prüfzelle
 - Nur direkt monetärer Nutzen ist in Euro bewertet; indirekter und nicht monetärer
