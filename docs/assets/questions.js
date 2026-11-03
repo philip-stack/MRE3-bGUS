@@ -285,7 +285,8 @@ window.QUESTIONS = [
       ["Reisekosten", "erfolgswirksam (werden nicht abgeschrieben)"],
       ["Hardware", "bilanzwirksam (werden abgeschrieben)"],
       ["Software", "bilanzwirksam (werden abgeschrieben)"],
-    ] },
+    ],
+    explain: "Die Abbildung (Brugger Abb. 4.3) ordnet die Positionen nicht einzeln zu. Die Zuordnung folgt der Kostentabelle im Skript: Dienstleistungen und Reisen sind „Kosten für Dienstleistungen“, Hardware, Software und Daten sind „Kosten für Anschaffungen“." },
 
   { id: "ko06", topic: "kosten", type: "single",
     q: "Welche Unterscheidung nach dem zeitlichen Anfall ist bei der Erfassung von Projektkosten zu treffen?",
@@ -869,9 +870,15 @@ window.QUESTIONS = [
 
   { id: "an17", topic: "analyse", type: "single",
     q: "Welche Normstrategie empfiehlt das McKinsey-Portfolio bei hoher Marktattraktivität und hohen relativen Wettbewerbsvorteilen?",
-    options: ["Investition – Marktführerschaft halten", "Abschöpfung", "Desinvestition", "Investition oder Rückzug"],
+    options: ["Marktführerschaft halten", "Abschöpfung", "Desinvestition", "Investition oder Rückzug"],
     answer: 0,
-    explain: "Niedrig/niedrig bedeutet Desinvestition. Hohe Attraktivität bei niedrigem Vorteil bedeutet Investition oder Rückzug. Niedrige Attraktivität bei hohem Vorteil bedeutet Abschöpfung." },
+    explain: "Die Ecken der Matrix: hoch/hoch bedeutet Marktführerschaft halten, niedrig/niedrig bedeutet Desinvestition. Die beiden anderen Ecken sind „Investition oder Rückzug“ und „Abschöpfung“. Achtung: Auf der Folie sind die Achsen nicht eindeutig beschriftet, deshalb sind diese zwei Ecken nicht sicher zuzuordnen. Nach üblicher Lehrmeinung gilt hohe Attraktivität bei niedrigem Vorteil als „Investition oder Rückzug“." },
+
+  { id: "an48", topic: "analyse", type: "multi",
+    q: "Welche Normstrategien kommen im McKinsey-Portfolio (9 Felder, Folie aus der LV) vor?",
+    options: ["Marktführerschaft halten", "Investition", "Wachstum", "Übergang", "Abschöpfung und stufenweise Desinvestition", "Investition oder Rückzug", "Melken", "Diversifikation"],
+    answer: [0, 1, 2, 3, 4, 5],
+    explain: "Die 9 Felder sind: Marktführerschaft halten, Investition, Investition oder Rückzug, Wachstum, Übergang, 2× Abschöpfung und stufenweise Desinvestition, Abschöpfung, Desinvestition. „Melken“ ist BCG-Jargon für die Cash Cow." },
 
   { id: "an18", topic: "analyse", type: "single",
     q: "Wie werden die vielen Einzelindikatoren im McKinsey-Portfolio zweckmäßigerweise verknüpft?",
@@ -962,7 +969,8 @@ window.QUESTIONS = [
     gaps: [["Exploration", "Machbarkeit", "Markteinführung"], ["Machbarkeit", "Exploration", "Ideengenerierung"]] },
 
   { id: "an30", topic: "analyse", type: "match",
-    q: "Stage-Gate: Ordnen Sie die Gates zu.",
+    q: "Stage-Gate (Variante mit 6 Gates, Folie 76): Ordnen Sie die Gates zu.",
+    explain: "Achtung: Die LV zeigt zwei Varianten. Folie 76 hat 6 Gates (Gate 1 = Projektbeginn vor der Ideengenerierung). Folie 77 hat 4 Gates zwischen den 5 Phasen (Gate 1 nach der Ideengenerierung) und nennt dazu die Gate-Kriterien.",
     pairs: [
       ["Gate 1", "Projektbeginn"],
       ["Gate 2", "Konzeptfreigabe (Definition der Produktoptionen)"],
@@ -1050,9 +1058,33 @@ window.QUESTIONS = [
     pairs: [["Fixkosten", "30 %"], ["Absatzmenge", "40 %"], ["Variable Stückkosten", "60 %"], ["Preis", "100 %"]] },
 
   { id: "pr05", topic: "pricing", type: "num",
-    q: "Preis 100 €, variable Kosten 60 €. Der Preis wird um 10 % auf 90 € gesenkt. Um wie viel <b>Prozent</b> muss die Absatzmenge steigen, damit der Gewinn gleich bleibt? (auf 1 Nachkommastelle)",
+    q: "Beispiel von der Folie „Preisreduktion von 10 %“: Preis 100 €, Kosten 80 € pro Stück. Der Preis wird um 10 % auf 90 € gesenkt. Um wie viel <b>Prozent</b> muss die Absatzmenge steigen, damit der Gewinn gleich bleibt?",
+    answer: 100, tol: 0.5, unit: "%",
+    explain: "Der Gewinn pro Stück halbiert sich von 20 € auf 10 €. Man muss also doppelt so viel verkaufen, das sind +100 % (so auch die Folie: „100 %!“)." },
+
+  { id: "pr12", topic: "pricing", type: "num",
+    q: "Anderes Zahlenbeispiel: Preis 100 €, variable Kosten 60 € pro Stück (Fixkosten bleiben gleich). Der Preis wird um 10 % auf 90 € gesenkt. Um wie viel <b>Prozent</b> muss die Absatzmenge steigen, damit der Gewinn gleich bleibt? (auf 1 Nachkommastelle)",
     answer: 33.3, tol: 0.2, unit: "%",
-    explain: "Der Deckungsbeitrag pro Stück sinkt von 40 auf 30 €. 40 / 30 = 1,333, also rund +33,3 % Menge." },
+    explain: "Der Deckungsbeitrag pro Stück sinkt von 40 € auf 30 €. 40 / 30 = 1,333, also rund +33,3 % Menge. Das Ergebnis hängt immer davon ab, wie viel vom Preis pro Stück übrig bleibt: Je kleiner die Marge, desto größer die nötige Mehrmenge." },
+
+  { id: "pr13", topic: "pricing", type: "single",
+    q: "Weber-Grill-Beispiel aus der LV: „One Touch Gold“ kostet 159,70 €, „One Touch Silver“ 99,70 €. Was zeigt das Beispiel?",
+    options: [
+      "Für mehr Komfort sind Kunden bereit, deutlich mehr zu zahlen (+60 % Preis) – Preis nach Kundennutzen bzw. Zahlungsbereitschaft",
+      "Höhere Produktionskosten müssen immer voll weitergegeben werden",
+      "Kostenführerschaft ist im Konsumgüterbereich die einzige erfolgreiche Strategie",
+      "Der Köder-Effekt bei Abonnements",
+    ],
+    answer: 0 },
+
+  { id: "pr14", topic: "pricing", type: "match",
+    q: "Pricing-Herausforderungen (Simon-Kucher): Welche Abteilung argumentiert typischerweise wofür?",
+    pairs: [
+      ["Sales („Ich weiß, was die Konkurrenz verlangt“)", "Low prices"],
+      ["Product („Ich weiß, wie gut unser Produkt ist“)", "Brand premium"],
+      ["Marketing („Ich weiß, was unsere Kunden sagen“)", "Value pricing"],
+      ["Finance („Ich kenne unsere Kosten“)", "Target margins"],
+    ] },
 
   { id: "pr06", topic: "pricing", type: "single",
     q: "The Economist bot zusätzlich eine unattraktive Option „nur Print“ zum gleichen Preis wie „Print + Online“ (125 USD) an. Kaum jemand wählte sie, aber der Anteil „Print + Online“ stieg von 32 % auf 84 %. Welcher Effekt wird hier genutzt?",
@@ -1132,9 +1164,9 @@ window.QUESTIONS = [
     answer: 0 },
 
   { id: "gr07", topic: "gruendung", type: "num",
-    q: "Bis zu wie viel Prozent des Jahresumsatzes dürfen Unternehmer:innen laut Nebenrechten ergänzende Leistungen aus anderen (freien) Gewerben erbringen?",
+    q: "Bis zu wie viel Prozent des Jahresumsatzes dürfen Unternehmer:innen laut Nebenrechten insgesamt ergänzende Leistungen aus anderen (reglementierten und freien) Gewerben erbringen, ohne eigene Gewerbeberechtigung?",
     answer: 30, tol: 0, unit: "%",
-    explain: "Aus reglementierten Gewerben sind es nur bis 15 % des jeweiligen Auftragswertes." },
+    explain: "Zusätzlich gilt: Leistungen aus reglementierten Gewerben dürfen nur bis 15 % des jeweiligen Auftragswertes bzw. Zeitaufwandes ausmachen." },
 
   { id: "gr08", topic: "gruendung", type: "match",
     q: "Ordnen Sie die Haftung der Rechtsform bzw. Rolle zu.",
@@ -1190,7 +1222,7 @@ window.QUESTIONS = [
   { id: "gr16", topic: "gruendung", type: "num",
     q: "Wie hoch ist die Körperschaftsteuer (KöSt) für eine GmbH in Österreich (in %)?",
     answer: 23, tol: 0, unit: "%",
-    explain: "Für Ausschüttungen kommen 27,5 % KESt dazu. Die Mindest-KöSt beträgt 500 € pro Jahr." },
+    explain: "Für Ausschüttungen kommen 27,5 % KESt dazu. Die Mindest-KöSt beträgt 500 € pro Jahr (5 % des gesetzlichen Mindeststammkapitals), vorausgezahlt zu je einem Viertel. Die Rechtsform-Tabelle im Leitfaden sagt „500 € p. a. in den ersten fünf Jahren“." },
 
   { id: "gr17", topic: "gruendung", type: "multi",
     q: "Welche Aussagen zur Flexiblen Kapitalgesellschaft (FlexKapG/FlexCo) sind richtig?",
@@ -1231,7 +1263,8 @@ window.QUESTIONS = [
       "Umsatzsteuer in den ersten 3 Jahren",
       "Einkommensteuer im ersten Jahr",
     ],
-    answer: [0, 1, 2] },
+    answer: [0, 1, 2],
+    explain: "Die Befreiung von Lohnabgaben gilt nur bei Neugründungen, nicht bei Betriebsübertragungen." },
 
   { id: "gr23", topic: "gruendung", type: "multi",
     q: "Welche Voraussetzungen gelten für die NeuFöG-Begünstigung?",
@@ -1269,7 +1302,7 @@ window.QUESTIONS = [
 
   { id: "gr29", topic: "gruendung", type: "single",
     q: "Ein Einzelhandelsgeschäft mit 450 m² Verkaufsfläche: Ist eine Betriebsanlagengenehmigung nötig?",
-    options: ["Nein, laut 2. Genehmigungsfreistellungsverordnung (Einzelhandel bis 600 m²) in der Regel nicht", "Ja, jede Betriebsanlage ist genehmigungspflichtig", "Nur wenn mehr als 5 Mitarbeiter", "Nur in Wien"],
+    options: ["Nein, laut 2. Genehmigungsfreistellungsverordnung (bestimmte Arten von Einzelhandelsbetrieben bis 600 m²) in der Regel nicht", "Ja, jede Betriebsanlage ist genehmigungspflichtig", "Nur wenn mehr als 5 Mitarbeiter", "Nur in Wien"],
     answer: 0 },
 
   { id: "gr30", topic: "gruendung", type: "tf",
@@ -1590,5 +1623,282 @@ window.QUESTIONS = [
   { id: "pl40", topic: "planung", type: "single",
     q: "Ab einem Umsatz von wie viel Euro muss die Umsatzsteuervoranmeldung monatlich statt quartalsweise abgegeben werden?",
     options: ["100.000 €", "55.000 €", "35.000 €", "700.000 €"],
+    answer: 0 },
+
+  /* ===================== ERGÄNZUNGEN NACH QUELLENPRÜFUNG ===================== */
+  /* --- Business Case --- */
+  { id: "bc30", topic: "bc", type: "multi",
+    q: "Welche Möglichkeiten zur Erstellung eines Business Case nennt das Skriptum?",
+    options: ["Interne Erstellung", "Erstellung durch externe Berater", "Gemeinschaftlich durch interne Mitarbeiter und externe Berater", "Erstellung mit Lieferanten", "Erstellung durch die Hausbank", "Erstellung durch das Finanzamt"],
+    answer: [0, 1, 2, 3] },
+
+  { id: "bc31", topic: "bc", type: "single",
+    q: "Laut Entscheidungsbaum: Ein Projekt über dem Kosten-Grenzbereich betrifft ein Management- bzw. Führungsinformationssystem (z. B. Balanced Scorecard). Es gibt mehrere Umsetzungsalternativen. Welcher Business Case ist angebracht?",
+    options: ["Business Case als Kostenvergleich", "Business Case als Kosten/Nutzen-Vergleich", "Kein Business Case", "Business Plan statt Business Case"],
+    answer: 0,
+    explain: "Wie bei gesetzlich oder vertraglich notwendigen Projekten wird geprüft, ob es Alternativen gibt. Gibt es welche, folgt ein Kostenvergleich. Gibt es keine, braucht es keinen Business Case." },
+
+  { id: "bc32", topic: "bc", type: "multi",
+    q: "Für welche Zwecke kann laut Skriptum ein <b>Business Plan</b> erstellt werden?",
+    options: [
+      "Als internes Werkzeug zur Planung der Geschäftsentwicklung und Strategieumsetzung",
+      "Als Investment Memorandum, um Fremd- oder Risikokapitalgeber zu gewinnen",
+      "Als Unterlage für einen Börsengang (IPO)",
+      "Für die Öffentlichkeitsarbeit (Fragen von Analysten und Rating-Agenturen)",
+      "Als Wirtschaftlichkeitsnachweis für ein einzelnes IT-Projekt",
+    ],
+    answer: [0, 1, 2, 3],
+    explain: "Der Wirtschaftlichkeitsnachweis für ein einzelnes Projekt ist die Aufgabe des Business Case." },
+
+  { id: "bc33", topic: "bc", type: "single",
+    q: "Wie heißt das Gremium, dessen Aufbau im Kapitel „Projektdetails“ unter Projektorganisation beschrieben wird?",
+    options: ["Projektsteuerungsausschuss", "Aufsichtsrat", "Betriebsrat", "Generalversammlung"],
+    answer: 0 },
+
+  /* --- Kosten & Nutzen --- */
+  { id: "ko19", topic: "kosten", type: "multi",
+    q: "In welche Kategorien unterteilt Brugger die Kosten (Abb. „Kostenunterteilung“)?",
+    options: ["Investitionskosten (extern/intern)", "Betriebskosten (extern/intern)", "Umlaufvermögen (Erhöhung): Lager und Forderungen", "Opportunitätskosten", "Kalkulatorische Wagniskosten"],
+    answer: [0, 1, 2],
+    explain: "Wichtig ist die dritte Kategorie: Eine Erhöhung des Umlaufvermögens (mehr Lager, mehr Forderungen) bindet Kapital und zählt deshalb auch als Kosten." },
+
+  { id: "ko20", topic: "kosten", type: "single",
+    q: "Für einen Prototypen wird eine Lagerhalle benutzt. Zu welcher Kostenkategorie zählt das laut Skriptum?",
+    options: ["Infrastrukturkosten (dritte Kostenkategorie)", "Externe Dienstleistungskosten", "Personalkosten (Primärkosten)", "Intern verrechnete Leistungen"],
+    answer: 0 },
+
+  { id: "ko21", topic: "kosten", type: "match",
+    q: "Ordnen Sie die Positionen der Kostentabelle im Skriptum zu.",
+    pairs: [
+      ["Kosten für Daten", "Externe Kosten – Kosten für Anschaffungen"],
+      ["Kosten für Programmierungen", "Externe Kosten – Kosten für Dienstleistungen"],
+      ["Abfindungen", "Interne Kosten – Personalkosten (Primärkosten)"],
+      ["IT-bezogene Umlagen (PC, E-Mail, Netzwerk)", "Interne Kosten – Personalkosten (Sekundärkosten)"],
+      ["Raumkosten für Meetings und Schulungen", "Interne Kosten – Infrastrukturkosten"],
+    ] },
+
+  { id: "ko22", topic: "kosten", type: "single",
+    q: "Ordnungsraster nach Brugger (Abb. „Klassifizierung Kosten“): Welche zwei Dimensionen werden dabei kombiniert?",
+    options: [
+      "Zeitlicher Anfall (Investitionskosten/Projektphase vs. Betriebskosten/Betriebsphase) und sachliche Abgrenzung (externe vs. interne Kosten)",
+      "Fixe vs. variable Kosten und direkte vs. indirekte Kosten",
+      "Marktwachstum und Marktanteil",
+      "Erfolgswirksam vs. bilanzwirksam und Eigen- vs. Fremdkapital",
+    ],
+    answer: 0 },
+
+  { id: "ko23", topic: "kosten", type: "num",
+    q: "E-Shop-Beispiel (Cashflow-Rechnung): Im Jahr 1 beträgt der zu versteuernde Cashflow −600.000 €, die Ertragsteuern −180.000 €. Mit welchem Steuersatz (in %) wird gerechnet?",
+    answer: 30, tol: 0, unit: "%",
+    explain: "−180.000 / −600.000 = 30 %. Die Ertragsteuer ist negativ, das heißt: Der Verlust des Projekts senkt die Steuerlast des Gesamtunternehmens (Steuerersparnis)." },
+
+  { id: "ko24", topic: "kosten", type: "tf",
+    q: "Im E-Shop-Beispiel sind die Ertragsteuern in den Verlustjahren 1 und 2 negativ – der Projektverlust wirkt als Steuerersparnis.",
+    answer: true },
+
+  /* --- Strategie --- */
+  { id: "st24", topic: "strategie", type: "single",
+    q: "Wie wird „Strategisches Management“ in der LV definiert?",
+    options: [
+      "Ziele setzen und den Weg festlegen, der von der gegenwärtigen Unternehmenssituation zu den Zielen führt",
+      "Die Kontrolle der operativen Kosten im laufenden Geschäftsjahr",
+      "Die Erstellung des Jahresbudgets",
+      "Die Auswahl des Managements durch den Aufsichtsrat",
+    ],
+    answer: 0 },
+
+  { id: "st25", topic: "strategie", type: "single",
+    q: "Wie bezeichnet die LV die Unternehmensstrategie bildhaft?",
+    options: ["Als „strategische Leitplanken“", "Als „Cash Cow“", "Als „Alleinstellungsmerkmal“", "Als „Gate“"],
+    answer: 0,
+    explain: "Grundlage ist die Ist-Analyse: Stärken und Schwächen des Unternehmens sowie Chancen und Gefahren in der Unternehmensumwelt." },
+
+  { id: "st26", topic: "strategie", type: "multi",
+    q: "Welche Fähigkeiten können laut LV entlang der Wertschöpfungskette zu einer SEP werden?",
+    options: [
+      "Kundenbedürfnisse rasch und besser als die Konkurrenz erkennen",
+      "Das Sortiment schneller den Marktbedürfnissen anpassen",
+      "Durch laufende Innovationen schneller neue überlegene Produkte auf den Markt bringen",
+      "Überlegene Beschaffungsquellen erschließen und sichern",
+      "Möglichst viele Geschäftsfelder gleichzeitig bearbeiten",
+    ],
+    answer: [0, 1, 2, 3] },
+
+  { id: "st27", topic: "strategie", type: "multi",
+    q: "Welche Anforderungen an strategisches Management (Aufbau von SEP) werden in der LV aufgelistet?",
+    options: [
+      "Formulierung eines grundsätzlichen Unternehmensleitbildes (Vision)",
+      "Festlegung der Tätigkeitsfelder (strategische Geschäftsfelder)",
+      "Umwelt- und Unternehmensanalysen mit Früherkennungscharakter",
+      "Unternehmensinterne Koordination der Geschäfts- und Funktionsbereiche",
+      "Überprüfung und Steuerung durch ein strategisch ausgerichtetes Controlling",
+      "Maximierung des kurzfristigen Quartalsgewinns",
+    ],
+    answer: [0, 1, 2, 3, 4],
+    explain: "Weitere Punkte: dauerhafte Erfolgspotenziale aufbauen, Marktbearbeitungsstrategien unter Einbeziehung aller Funktionsbereiche, strukturelle und unternehmenskulturelle Maßnahmen." },
+
+  /* --- Analyseinstrumente --- */
+  { id: "an40", topic: "analyse", type: "match",
+    q: "Ansoff-Matrix (Folie mit Unterstrategien): Ordnen Sie die Unterstrategien zu.",
+    pairs: [
+      ["Marktbesetzung, Verdrängung", "Marktdurchdringung"],
+      ["Globalisierung, Marktsegmentierung", "Marktentwicklung"],
+      ["Produktinnovation, Produktdifferenzierung", "Produktentwicklung"],
+      ["vertikal, horizontal, lateral", "Diversifikation"],
+    ] },
+
+  { id: "an41", topic: "analyse", type: "match",
+    q: "BCG-Portfoliostrategien: Wie verhält man sich jeweils gegenüber dem Risiko?",
+    pairs: [["Star", "akzeptieren"], ["Question Mark", "akzeptieren"], ["Cash Cow", "einschränken"], ["Poor Dog", "stark reduzieren"]] },
+
+  { id: "an42", topic: "analyse", type: "single",
+    q: "In der Grafik zur GAP-Analyse: Was ist der „Gap“?",
+    options: [
+      "Die Differenz zwischen Zielwert und Prognosewert (ohne zusätzliche Maßnahmen); ein Teil davon lässt sich mit operativen Maßnahmen schließen, der Rest braucht strategische",
+      "Die Differenz zwischen Umsatz und Kosten",
+      "Die Differenz zwischen eigenem und Konkurrenz-Marktanteil",
+      "Die Differenz zwischen Plan- und Istkosten des Vorjahres",
+    ],
+    answer: 0 },
+
+  { id: "an43", topic: "analyse", type: "multi",
+    q: "Welche Gate-Kriterien für Stop/Go-Entscheidungen nennt die LV beim Stage-Gate-Prozess?",
+    options: ["Konformität mit Kundentrends", "Strategic Fit", "Wettbewerbsbarrieren", "Technische Machbarkeit ist gegeben", "Top-Management-Unterstützung", "Gewinn unter Risiko, Synergieeffekte", "Anzahl der Projektmitarbeiter", "Aktueller Börsenkurs"],
+    answer: [0, 1, 2, 3, 4, 5] },
+
+  { id: "an44", topic: "analyse", type: "multi",
+    q: "Stage-Gate – Einbindung des Kunden: Welche drei Bereiche unterscheidet die LV?",
+    options: ["Kundensicht einnehmen", "Kundenspezifisches Wissen zusammentragen", "Kunden einbinden", "Kunden finanziell beteiligen", "Kundendaten verkaufen"],
+    answer: [0, 1, 2] },
+
+  { id: "an45", topic: "analyse", type: "multi",
+    q: "Welche Reports bzw. Outputs liefert das PIMS-Programm laut LV?",
+    options: ["Par ROI / Cash Flow Report", "Strategy Analysis Report", "Optimum Strategy Report", "BCG-Matrix", "Five-Forces-Report"],
+    answer: [0, 1, 2],
+    explain: "PIMS unterscheidet außerdem analytische Modelle und Simulationsmodelle." },
+
+  { id: "an46", topic: "analyse", type: "single",
+    q: "Was betrachtet das Element „Struktur“ im 7-S-Modell?",
+    options: [
+      "Die Aufbauorganisation (Einlinien-, Mehrlinien-, Stablinien- oder Matrixorganisation)",
+      "Die gemeinsamen Werte",
+      "Die Abläufe in Produktion und Lagerbuchhaltung",
+      "Das Know-how der Mitarbeiter",
+    ],
+    answer: 0,
+    explain: "Abläufe sind „Systeme“, Werte sind „Shared Values“, Know-how sind „Skills“ (Spezialfähigkeiten)." },
+
+  { id: "an47", topic: "analyse", type: "single",
+    q: "Erfahrungskurve Speichermedien (Christensen): Was bedeutet die „53 %-Kurve“?",
+    options: [
+      "Bei jeder Verdoppelung der kumulierten Menge fällt der Preis pro Megabyte auf 53 % des vorherigen Werts",
+      "Der Preis sinkt bei jeder Verdoppelung um 53 %",
+      "53 % aller Hersteller verlassen den Markt",
+      "Der Marktanteil des Marktführers beträgt 53 %",
+    ],
+    answer: 0 },
+
+  /* --- Gründung: Recht --- */
+  { id: "gr40", topic: "gruendung", type: "match",
+    q: "Vertretung und Geschäftsführung in Personengesellschaften: Ordnen Sie zu.",
+    pairs: [
+      ["OG – Vertretung", "Jede:r Gesellschafter:in allein"],
+      ["OG – außergewöhnliche Maßnahmen", "Einstimmiger Beschluss aller Gesellschafter:innen"],
+      ["KG – Vertretung", "Nur die Komplementäre"],
+    ] },
+
+  { id: "gr41", topic: "gruendung", type: "multi",
+    q: "Nach welchen Kriterien soll man laut Leitfaden die Rechtsform wählen?",
+    options: ["Persönliche Kriterien", "Steuerliche Kriterien", "Betriebswirtschaftliche Kriterien", "Gesellschaftsrechtliche Kriterien", "Der Firmenname soll möglichst kurz sein"],
+    answer: [0, 1, 2, 3],
+    explain: "Keine Rechtsform ist dauerhaft ideal, man sollte die Wahl alle paar Jahre überprüfen." },
+
+  { id: "gr42", topic: "gruendung", type: "single",
+    q: "Was ist eine GmbH & Co KG?",
+    options: [
+      "Eine KG, bei der eine GmbH Komplementär ist – es werden zwei Gesellschaften gegründet",
+      "Eine GmbH mit mehr als 10 Gesellschaftern",
+      "Eine GmbH ohne Stammkapital",
+      "Eine Genossenschaft mit GmbH-Anteilen",
+    ],
+    answer: 0,
+    explain: "Wegen der zwei Gesellschaften sind die Kosten höher. Die GmbH & Co KG ist immer buchführungspflichtig." },
+
+  { id: "gr43", topic: "gruendung", type: "tf",
+    q: "Wenn kein schriftlicher Dienstvertrag abgeschlossen wird, ist ein Dienstzettel Pflicht.",
+    answer: true,
+    explain: "Dienstvertrag und Dienstzettel sind beide gebührenfrei." },
+
+  /* --- Gründung: Planung, Finanzierung, Steuern, SV --- */
+  { id: "pl41", topic: "planung", type: "single",
+    q: "Kleinunternehmerregelung (USt): Was gilt, wenn man die 55.000-€-Grenze innerhalb eines Jahres leicht überschreitet?",
+    options: [
+      "Einmalige Toleranz von höchstens 10 % – die Befreiung gilt dann bis zum Ende des Kalenderjahres weiter",
+      "Die Befreiung fällt rückwirkend für das ganze Jahr weg",
+      "Es gibt keine Toleranz",
+      "Die Grenze verdoppelt sich automatisch",
+    ],
+    answer: 0 },
+
+  { id: "pl42", topic: "planung", type: "match",
+    q: "Förderarten: Ordnen Sie zu.",
+    pairs: [
+      ["Zuschuss", "nicht rückzahlbar"],
+      ["Geförderter Kredit", "muss besichert und zurückgezahlt werden"],
+      ["Garantie/Haftung", "öffentliche Stelle übernimmt einen Teil des Kreditrisikos"],
+    ] },
+
+  { id: "pl43", topic: "planung", type: "single",
+    q: "Wie hoch ist die AMS-EPU-Förderung für die erste Arbeitskraft eines Ein-Personen-Unternehmens?",
+    options: ["25 % des Bruttogehalts für 12 Monate", "50 % des Bruttogehalts für 6 Monate", "100 % für 3 Monate", "Pauschal 5.000 €"],
+    answer: 0 },
+
+  { id: "pl44", topic: "planung", type: "single",
+    q: "Wie hoch sind die Sozialversicherungsbeiträge laut Leitfaden im Durchschnitt, bezogen auf den Jahresgewinn?",
+    options: ["Etwa 27 %", "Etwa 10 %", "Etwa 50 %", "Etwa 3 %"],
+    answer: 0 },
+
+  { id: "pl45", topic: "planung", type: "num",
+    q: "Wie hoch sind die SVS-Mindestbeiträge 2026 insgesamt pro Jahr (PV + KV + Selbständigenvorsorge + UV) in €?",
+    answer: 1929.72, tol: 0.01, unit: "€",
+    explain: "Die Summe setzt sich zusammen aus PV 1.223,40 €, KV 449,76 €, Vorsorge 101,16 € und UV 155,40 €. Das ergibt 1.929,72 € pro Jahr bzw. 160,81 € pro Monat." },
+
+  { id: "pl46", topic: "planung", type: "single",
+    q: "Bis wann muss die Einkommensteuererklärung elektronisch (FinanzOnline) abgegeben werden?",
+    options: ["30. Juni des Folgejahres", "30. April des Folgejahres", "31. Dezember des laufenden Jahres", "15. Februar des Folgejahres"],
+    answer: 0,
+    explain: "Die Papiererklärung ist bis 30. April fällig. Eine Anpassung der Vorauszahlung kann man bis 30. September beantragen." },
+
+  { id: "pl47", topic: "planung", type: "multi",
+    q: "Welche Aussagen zur Registrierkassenpflicht stimmen?",
+    options: [
+      "Beide Grenzen (15.000 € Jahresumsatz, 7.500 € Barumsatz) sind Nettobeträge",
+      "Kartenzahlungen zählen als Barumsätze",
+      "Es besteht zusätzlich eine Belegerteilungspflicht",
+      "Onlineshops sind registrierkassenpflichtig",
+    ],
+    answer: [0, 1, 2],
+    explain: "Onlineshops sind ausgenommen, ebenso Umsätze im Freien bis 30.000 € („kalte Hände“)." },
+
+  { id: "pl48", topic: "planung", type: "single",
+    q: "Ab welcher Höhe offener Forderungen kommt Factoring laut Leitfaden üblicherweise infrage?",
+    options: ["Ab 150.000 €", "Ab 1.000 €", "Ab 1 Mio. €", "Ab 15.000 €"],
+    answer: 0,
+    explain: "Man erhält sofort ca. 80 % der Forderung. Die Gebühr beträgt 0,2 bis 1,5 % des Bruttoumsatzes." },
+
+  { id: "pl49", topic: "planung", type: "single",
+    q: "Ab welchem Rechnungsbetrag muss die UID-Nummer des Leistungsempfängers auf der Rechnung stehen?",
+    options: ["Über 10.000 € (inkl. USt)", "Über 400 €", "Immer", "Über 100.000 €"],
+    answer: 0,
+    explain: "Die eigene UID-Nummer muss auf jeder Rechnung über 400 € stehen." },
+
+  { id: "pl50", topic: "planung", type: "single",
+    q: "Freiwillige Arbeitslosenversicherung für Selbstständige (Opting-in): Was gilt?",
+    options: [
+      "Entscheidung innerhalb von 6 Monaten, Bindung für 8 Jahre",
+      "Jederzeit kündbar",
+      "Pflicht für alle Einzelunternehmer",
+      "Nur für GmbH-Geschäftsführer möglich",
+    ],
     answer: 0 },
 ];

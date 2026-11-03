@@ -73,7 +73,7 @@ rechnet sich durch die gesamte Datei durch.
 
 ## Prüfungsvorbereitung (GitHub Pages)
 
-Lernskript für einen Lerntag und ein Fragenkatalog im Stil eines Moodle-Tests (226 Fragen,
+Lernskript und ein Fragenkatalog im Stil eines Moodle-Tests (266 Fragen,
 inkl. Rechenaufgaben) unter **https://philip-stack.github.io/MRE3-bGUS/**. Quellcode in `docs/`.
 
 ## Autor
