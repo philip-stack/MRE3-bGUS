@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GUS Prüfungsvorbereitung</title>
+  <meta name="description" content="Lernskript und Moodle-Fragenkatalog für Geschäftsmodellentwicklung und Start-Up Management (MRE3, FH Technikum Wien)">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">GUS <span>Prüfungsvorbereitung</span></a>
+      <nav class="topnav">
+        <a href="index.html" class="active">Lernplan &amp; Skript</a>
+        <a href="quiz.html">Fragenkatalog</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="breadcrumb">Master Robotics Engineering · 3. Semester · Geschäftsmodellentwicklung und Start-Up Management</div>
+    <h1>An einem Tag zur Prüfung</h1>
+  </div>
+
+  <main class="container">
+    <div class="grid-3">
+      <div class="card"><div class="stat">70 %</div><div class="stat-label">der Note ist der Test (30 % die zeitgerechte BC-Abgabe)</div></div>
+      <div class="card"><div class="stat" id="q-count">–</div><div class="stat-label">Fragen im Katalog, Moodle-Fragetypen inkl. Rechenaufgaben</div></div>
+      <div class="card"><div class="stat">3</div><div class="stat-label">Quellen: Business-Case-Skript, Folien Strategisches Management, WKO-Gründungsleitfaden</div></div>
+    </div>
+
+    <section class="card" id="plan">
+      <h2>Lernplan für einen Tag</h2>
+      <p>Jeder Block hat zwei Teile: Zuerst liest du den Skript-Abschnitt, dann machst du sofort die Übungsfragen zu diesem Thema (Übungsmodus). Am Abend kommt die Prüfungssimulation über alles, danach wiederholst du nur noch deine Fehler.</p>
+      <div class="table-wrap">
+      <table class="schedule">
+        <thead><tr><th>Zeit</th><th>Block</th><th>Üben</th></tr></thead>
+        <tbody>
+          <tr><td>08:00 – 08:15</td><td>Überblick: diese Seite einmal durchscrollen, Spickzettel (§ 9) ansehen</td><td></td></tr>
+          <tr><td>08:15 – 09:30</td><td><a href="#bc">§ 1 Business Case – Grundlagen &amp; Erstellung</a></td><td><a href="quiz.html?topic=bc">29 Fragen</a></td></tr>
+          <tr><td>09:30 – 10:30</td><td><a href="#kosten">§ 2 Kosten &amp; Nutzen</a></td><td><a href="quiz.html?topic=kosten">18 Fragen</a></td></tr>
+          <tr><td>10:30 – 10:45</td><td>Pause</td><td></td></tr>
+          <tr><td>10:45 – 12:30</td><td><a href="#kennzahlen">§ 3 Investitionsrechnung &amp; Kennzahlen</a>: Beispiele selbst mit dem Taschenrechner nachrechnen</td><td><a href="quiz.html?topic=kennzahlen">27 Fragen</a></td></tr>
+          <tr><td>12:30 – 13:15</td><td>Mittagspause</td><td></td></tr>
+          <tr><td>13:15 – 14:30</td><td><a href="#strategie">§ 4 Strategiebegriff &amp; Strategiearten</a></td><td><a href="quiz.html?topic=strategie">23 Fragen</a></td></tr>
+          <tr><td>14:30 – 16:00</td><td><a href="#analyse">§ 5 Analyseinstrumente</a> + <a href="#pricing">§ 6 Pricing</a></td><td><a href="quiz.html?topic=analyse,pricing">50 Fragen</a></td></tr>
+          <tr><td>16:00 – 16:15</td><td>Pause</td><td></td></tr>
+          <tr><td>16:15 – 17:45</td><td><a href="#gruendung">§ 7 Gründung – Recht</a> + <a href="#planung">§ 8 Gründung – Planung, Finanzierung, Steuern &amp; SV</a></td><td><a href="quiz.html?topic=gruendung,planung">79 Fragen</a></td></tr>
+          <tr><td>17:45 – 18:30</td><td>Abendessen</td><td></td></tr>
+          <tr><td>18:30 – 19:15</td><td><b>Prüfungssimulation</b>: 30 zufällige Fragen, 45 Minuten</td><td><a href="quiz.html?topic=bc,kosten,kennzahlen,strategie,analyse,pricing,gruendung,planung&amp;mode=exam">Starten</a></td></tr>
+          <tr><td>19:15 – 20:00</td><td>Fehler wiederholen (Option „nur falsch beantwortete“), schwache Themen im Skript nachlesen</td><td><a href="quiz.html">Fragenkatalog</a></td></tr>
+          <tr><td>Prüfungstag</td><td>Spickzettel (§ 9) lesen, eine Simulation als Aufwärmen</td><td></td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="small muted">Schwerpunkt-Annahme: Am meisten Gewicht haben Business Case und Kennzahlen (das ist der Kern der LV und deines eigenen BC), danach Strategie. Den Gründungsleitfaden (135 Seiten) deckt das Skript nur in den prüfungstypischen Fakten ab.</p>
+    </section>
+
+    <div class="skript-layout">
+      <nav class="toc">
+        <strong>Inhalt</strong>
+        <ol>
+          <li><a href="#bc">Business Case – Grundlagen</a></li>
+          <li><a href="#kosten">Kosten &amp; Nutzen</a></li>
+          <li><a href="#kennzahlen">Kennzahlen &amp; Rechnen</a></li>
+          <li><a href="#strategie">Strategie</a></li>
+          <li><a href="#analyse">Analyseinstrumente</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#gruendung">Gründung – Recht</a></li>
+          <li><a href="#planung">Gründung – Planung &amp; Geld</a></li>
+          <li><a href="#spick">Spickzettel</a></li>
+        </ol>
+        <p style="margin:12px 0 0"><a class="btn" href="quiz.html">Zum Fragenkatalog</a></p>
+      </nav>
+
+      <div class="skript">
+        <!-- ============ 1 ============ -->
+        <section id="bc">
+          <span class="time-tag">ca. 75 min</span>
+          <h2>1. Business Case – Grundlagen &amp; Erstellung</h2>
+
+          <h3>Definition (Brugger)</h3>
+          <p>„Ein Business Case fasst alle <b>entscheidungsrelevanten Aspekte</b> eines geplanten Vorhabens mit dem Ziel zusammen, die <b>wirtschaftliche Vorteilhaftigkeit</b> und <b>strategische Konformität</b> des Gesamtprojekts aufzuzeigen und eine abschließende <b>Management-Entscheidung</b> über dessen Ausführung zu ermöglichen.“ Kurz gesagt: Rechnet sich das Projekt?</p>
+          <ul>
+            <li>Er reduziert die <b>Unsicherheit</b> von Investitionen. Ziel sind <b>Effektivität</b> (die richtigen Dinge tun) und <b>Effizienz</b> (die Dinge richtig tun).</li>
+            <li>Ersteller und Entscheider haben <b>divergierende Interessen</b>. Der Ersteller fragt: „Wie gewinne ich den Entscheider?“ Der Entscheider fragt: „Wie sichere ich nachhaltige Wertsteigerung?“</li>
+            <li>Das Management arbeitet als <b>Nutzenmaximierer</b>: bei gegebenen Mitteln maximaler Nutzen.</li>
+            <li>Maßgebend für die Wirtschaftlichkeit sind <b>Kosten und Nutzen</b>. Maßgebend für den Variantenentwurf sind <b>Risiken und Strategie</b>.</li>
+          </ul>
+
+          <h3>Business Case vs. Business Plan</h3>
+          <div class="table-wrap"><table>
+            <tr><th></th><th>Business Case</th><th>Business Plan</th></tr>
+            <tr><td>Betrachtung</td><td>ein konkretes Projekt bzw. eine Investition</td><td>ganze organisatorische Einheit (Unternehmen, Sparte, Business Unit)</td></tr>
+            <tr><td>Adressat</td><td><b>nur intern</b></td><td>intern <b>und extern</b> (Investoren, IPO, Analysten, Rating-Agenturen)</td></tr>
+            <tr><td>Zusammenhang</td><td>liefert Daten <b>an</b> den Business Plan</td><td>Grundlage für das Jahresbudget</td></tr>
+            <tr><td>Gemeinsam</td><td colspan="2">mehrjährig und zukunftsorientiert</td></tr>
+          </table></div>
+
+          <h3>Ergebnis der Wirtschaftlichkeitsanalyse</h3>
+          <ul>
+            <li><b>Durchführungsentscheidung</b> heißt <b>absolute</b> Vorteilhaftigkeit: Ja oder Nein zu einem einzigen Projekt.</li>
+            <li><b>Auswahlentscheidung</b> heißt <b>relative</b> Vorteilhaftigkeit: Welches von mehreren Projekten ist wirtschaftlicher? Das dient auch der Priorisierung.</li>
+          </ul>
+          <p>Wenn ein Projekt sich nicht rechnet, gibt es drei Fälle:</p>
+          <ul>
+            <li><b>Aussichtsreich:</b> überarbeiten und neu prüfen.</li>
+            <li><b>Aussichtslos, aber andere Gründe:</b> trotzdem umsetzen, z. B. wegen strategischem Beitrag oder weil es Basis für andere Projekte ist.</li>
+            <li><b>Aussichtslos:</b> ablehnen.</li>
+          </ul>
+
+          <h3>Nutzen eines Business Case</h3>
+          <p>Ein Business Case bringt:</p>
+          <ul>
+            <li>Entscheidungs<b>qualität</b> und Entscheidungs<b>spielraum</b> (Szenarien)</li>
+            <li><b>Transparenz</b> (alle Argumente, nicht nur finanzielle)</li>
+            <li><b>Verbindlichkeit</b> (Schriftstück)</li>
+            <li><b>finanzielle Klarheit</b> (Zahlenfriedhöfe werden zu Kennzahlen)</li>
+            <li><b>Nachvollziehbarkeit</b> und <b>Vergleichbarkeit</b></li>
+            <li>eine <b>Qualitätsbarriere</b> und <b>Vorauswahl</b></li>
+            <li>leichteres <b>Projektcontrolling</b></li>
+          </ul>
+          <p>Für die Projektplanung ergänzt er die technische um eine <b>wirtschaftliche</b> Planungsgrundlage, deckt Konzeptfehler auf und hilft, Risiken früh zu erkennen. Er unterstützt Projektplanung, Entscheidungsfindung und Investitionsplanung.</p>
+
+          <h3>Wann braucht es einen Business Case?</h3>
+          <ul>
+            <li><b>Rationalisierungsinvestition</b>, z. B. neue Maschine mit weniger Personalbedarf oder Zusammenlegung von Standorten</li>
+            <li><b>Erweiterungsinvestition</b>: ein bestehendes System wird ergänzt</li>
+            <li><b>Ablösungsinvestition</b>: Technologiewechsel, z. B. Telefonanlage auf IP-Telefonie</li>
+          </ul>
+          <p><b>Merkmale einer Investition:</b> Einmalcharakter (übersteigt den täglichen Cashbedarf), geplant mit festem Ziel, erwarteter Nutzen größer als die Investition, unregelmäßige Ein- und Auszahlungen.</p>
+          <div class="table-wrap"><table>
+            <tr><th>Wertgenerierung (Value Creation)</th><th>Wertsicherung (Value Protection)</th></tr>
+            <tr><td>z. B. Konsolidierungsprojekt, CRM-Einführung</td><td>z. B. Euro-Einführung, Buchhaltungssystem, Monitoring-Lösung</td></tr>
+            <tr><td>→ BC als <b>Kosten/Nutzen-Vergleich</b></td><td>→ BC als <b>Kostenvergleich</b></td></tr>
+          </table></div>
+          <p><b>Entscheidungsbaum:</b></p>
+          <ol>
+            <li>Kosten unter dem Grenzbereich (z. B. 100.000 €)? Dann <b>kein BC</b>.</li>
+            <li>Notwendig wegen staatlicher Regelung oder Vertrag? Oder ein Management- bzw. Führungsinformationssystem (z. B. Balanced Scorecard)? Dann weiter mit Frage 3. Sonst <b>BC als Kosten/Nutzen-Vergleich</b>.</li>
+            <li>Gibt es Alternativen? Ja: <b>BC als Kostenvergleich</b>. Nein: <b>kein BC</b>.</li>
+          </ol>
+          <p><b>Projekte mit Kostenfokus:</b> Strategieumsetzung (E-Shop), Finanztools, Führungsinstrumente (BSC), gesetzliche Vorschriften (Datenschutz, CSV), vertragliche Pflichten, organisatorische Regelungen (Zeiterfassung), IT-Sicherheit, Aufrechterhaltung des Betriebs (Monitoring), Schutzmaßnahmen (Feueralarm), Life-Cycle-Replacements, Engpässe durch organisches Wachstum, Trennung von Unternehmensteilen.</p>
+          <p><b>Vorweggenommene Entscheidung</b> (Case Study Systemintegration nach Übernahme): Ein BC lohnt sich trotzdem, weil die Umsetzungsart noch offen ist (inhouse oder System-Integrator). Risiken inhouse: Personalsituation und Know-how. Ist der Integrator schneller fertig, wird der Zeitvorteil als Nutzen quantifiziert. Aus dem reinen Kostenvergleich wird dann eine Kosten/Nutzen-Analyse, und die teurere Variante kann gewinnen.</p>
+
+          <h3>Wer erstellt den Business Case?</h3>
+          <ul>
+            <li>Er entsteht nie von einer Person allein, sondern ist eine Gemeinschaftsproduktion.</li>
+            <li><b>Verantwortlich ist der projektanfordernde Bereich.</b> Controlling, Finanzen und HR begleiten und verantworten ihre Zulieferungen. Das Management entscheidet.</li>
+            <li><b>Controlling bzw. Finanzen</b> liefert Steuersatz, Kapitalisierungszins, AfA-Regeln, Lohnsätze und Währungen. <b>HR</b> liefert Kosten für Neuanstellungen und Abfindungen. <b>Business Unit und IT</b> erheben jeweils ihre Kosten und Benefits.</li>
+          </ul>
+          <div class="table-wrap"><table>
+            <tr><th>Externe Berater – Vorteile</th><th>Externe Berater – Nachteile</th></tr>
+            <tr><td>Neutralität, Verfügbarkeit (schneller), Effizienz, Schlichtung, Innovation, Qualität, Glaubwürdigkeit</td><td>kein Know-how-Transfer, Cash-out-Kosten (auch wenn das Projekt sich nicht lohnt), hohe Kosten, Abhängigkeit, eigene Standardisierung (schwerer vergleichbar)</td></tr>
+          </table></div>
+
+          <h3>Phasen der Erstellung</h3>
+          <ol>
+            <li><b>Initialisierung:</b> Organisation (wer macht mit?), <b>Untersuchungsbereich</b> (Scope, auch Negativabgrenzung), <b>Analysemodell</b> (Kalkulationszins, Steuersatz, AfA-Dauer, Verfahren), <b>Betrachtungshorizont</b>.</li>
+            <li><b>Entwicklung:</b> Projektplanung und Systemkonzeption → Kosten erheben → Nutzen erheben → Wirtschaftlichkeitsmodell → Auswertung → Sensitivitäts-, Risiko- und Strategieanalyse (jeweils mit Alternativen-Entwurf) → Management Summary bzw. Empfehlung.</li>
+            <li><b>Prüfung:</b> Annahmen validieren. Was ist üblich? Passt es zum Budget? Gibt es <b>Double Counting</b> (Nutzen doppelt verkauft)? Sind die Daten schlüssig? Danach Verabschiedung oder Ablehnung.</li>
+          </ol>
+          <div class="falle">Ein häufiger Fehler ist, sofort mit der Kosten-Nutzen-Schätzung zu beginnen. Zuerst kommt das Fundament: Aktivitäten planen und die technische Lösung (Ist und Soll) konzipieren.</div>
+
+          <h3>Dokumentation (kein Standard, aber mindestens diese Kapitel)</h3>
+          <ul>
+            <li><b>Management Summary:</b> wird <b>zuletzt</b> geschrieben, die „Visitkarte“ der Ersteller.</li>
+            <li><b>Projektübersicht:</b> Ursprung (Problemlösung oder Opportunität), Strategiekonformität, Ist-Situation, Wettbewerb (ein direkter Vergleich ist zweischneidig, weil er als Angriff auf Führungskräfte verstanden werden kann), Soll-Situation mit Meilensteinplan, Szenarien (z. B. SWOT, inklusive <b>Unterlassungsalternative</b>), Risiken und deren Reduktion (kostet etwas).</li>
+            <li><b>Wirtschaftlichkeitsnachweis:</b> Nutzen dokumentiert mit Quellen, nur Nutzen genau <b>dieses</b> Projekts, alle Kosten, gleiche Kennzahlen für alle Szenarien, argumentierte Empfehlung.</li>
+            <li><b>Projektdetails:</b> Projektorganisation (Lenkungsausschuss), Projektplan, <b>kritische Erfolgsfaktoren</b> (Know-how, Motivation, klare Ziele, Management-Involvement, Ressourcen), <b>Erfolgsmessung über KPIs</b>.</li>
+          </ul>
+          <div class="merke">Laut LV-Info gliedert sich die Präsentation so: Ausgangssituation → Was wird investiert? → Sollsituation → Risiken → Kennzahlen (Payback, NPV, ROI) → Investitionsempfehlung.</div>
+          <p class="practice-link"><a class="btn btn-outline" href="quiz.html?topic=bc">Jetzt üben: Business Case Grundlagen</a></p>
+        </section>
+
+        <!-- ============ 2 ============ -->
+        <section id="kosten">
+          <span class="time-tag">ca. 60 min</span>
+          <h2>2. Kosten &amp; Nutzen</h2>
+          <h3>Kostengliederung</h3>
+          <p><b>Nach Zeit:</b></p>
+          <ul>
+            <li><b>Einmalige Kosten</b> (Investitionskosten, non-recurring, Projektphase): können auch am Ende anfallen, z. B. Abbau eines Windrads oder Bodenreinigung bei einer Tankstelle.</li>
+            <li><b>Laufende Kosten</b> (Betriebskosten, recurring, Betriebsphase).</li>
+          </ul>
+          <p><b>Nach Herkunft:</b></p>
+          <ul>
+            <li><b>Externe Kosten</b> (out-of-pocket): werden an Dritte bezahlt und sind über Kostenvoranschläge belegbar. Dazu gehören Dienstleistungen, Consulting, Programmierung, Installation, Schulungen, Reisen, Neueinstellungen, Lizenzen, Hardware und Daten.</li>
+            <li><b>Interne Kosten:</b>
+              <ul>
+                <li>Personalkosten. <b>Primärkosten</b> sind Löhne, interne Schulungen, Abfindungen und <b>Backfill</b> (Ersatz der Projektleute im Tagesgeschäft). <b>Sekundärkosten</b> sind Umlagen für Arbeitsplatz und IT.</li>
+                <li><b>Intern verrechnete Leistungen</b> von HR, Controlling usw.</li>
+                <li>Infrastruktur (Räume).</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="falle">Interne Kosten wegzulassen, weil sie „ohnehin anfallen“, ist falsch. Sonst wirkt ein Projekt mit nur internen Kosten künstlich rentabel. Vorteil interner Ressourcen: Sie werden ohne Gewinnaufschlag kalkuliert.</div>
+          <div class="table-wrap"><table>
+            <tr><th colspan="2">Externe Kosten nach Brugger</th></tr>
+            <tr><td><b>erfolgswirksam</b> (werden <b>nicht</b> abgeschrieben)</td><td>Dienstleistungen, Reisekosten, Daten</td></tr>
+            <tr><td><b>bilanzwirksam</b> (werden abgeschrieben)</td><td>Hardware, Software</td></tr>
+          </table></div>
+          <p><b>Investitionskosten bei IT-Projekten:</b></p>
+          <ul>
+            <li><b>Arbeits- bzw. Dienstleistungsaufwand:</b> Beratung, Anforderungsanalyse, Entwicklung, Anpassung, Implementierung, Roll-out, Schulungen.</li>
+            <li><b>Investitionen:</b> Lizenzen, Hardware, Arbeitsplätze.</li>
+            <li><b>Sonstige:</b> vorzeitige Auflösung von Leasing-, Wartungs- oder Outsourcing-Verträgen, Reisekosten.</li>
+          </ul>
+          <p>Hard- und Software sind meist nur ein <b>kleiner</b> Teil der Projektkosten.</p>
+          <p><b>Ablöse- vs. Anlaufkosten:</b> In der Einführungsphase laufen alte und neue Lösung parallel. Diese <b>Doppelaufwendungen</b> müssen in den BC.</p>
+
+          <h3>Nutzen</h3>
+          <ul>
+            <li>Nutzen entsteht nur in der <b>Betriebsphase</b>. Eine Unterscheidung nach Projekt- und Betriebsphase entfällt deshalb.</li>
+            <li><b>Klassifikation:</b>
+              <ul>
+                <li>höherer Umsatz (vorhandene oder neue Umsatzquellen)</li>
+                <li>Produktivitätssteigerung (einheitliche Prozesse, mehr Automation)</li>
+                <li>geringere Betriebskosten (Kosteneinsparung, Kostenvermeidung)</li>
+                <li>geringeres Umlaufvermögen (weniger Lager, weniger Forderungen)</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="table-wrap"><table>
+            <tr><th>Quantifizierbar (tangible): direkt</th><th>Quantifizierbar (tangible): indirekt</th><th>Nicht quantifizierbar (intangible)</th></tr>
+            <tr><td>geringere Kosten für Wartungsverträge, Lizenzen, Hardware, Support, Löhne, Lager, Fracht</td><td>höhere Mitarbeiterproduktivität, Kundenzufriedenheit, Kundenbindung, bessere Auslastung, mehr Service</td><td>Strategiekonformität, Flexibilität, integrierte Information, Image, Mitarbeitermoral, Arbeitsbedingungen</td></tr>
+          </table></div>
+
+          <h3>GuV vs. Cashflow</h3>
+          <p>Projekte kann man auf GuV-Basis (EBITDA, EBIT) oder auf Cashflow-Basis beurteilen. Der Cashflow ist <b>objektiver</b>, weil er nicht von Bewertungsspielräumen wie der Nutzungsdauer abhängt. <b>„Profit is an opinion, cash is fact.“</b></p>
+          <div class="formel">Einsparungen/Umsatzplus − Aufwendungen = Cashflow vor Steuer<br>− Abschreibungen = zu versteuernder Cashflow<br>− Ertragsteuern + Abschreibungen = Cashflow nach Steuer<br>− Kosten für Abschreibungsobjekte ± Veränderung Umlaufvermögen = <b>Netto-Cashflow</b></div>
+          <p>Die AfA wird nur abgezogen, um die Steuer zu berechnen. Sie ist <b>nicht zahlungswirksam</b> und wird deshalb wieder addiert. Die echte Auszahlung ist die Anschaffung.</p>
+          <p class="practice-link"><a class="btn btn-outline" href="quiz.html?topic=kosten">Jetzt üben: Kosten &amp; Nutzen</a></p>
+        </section>
+
+        <!-- ============ 3 ============ -->
+        <section id="kennzahlen">
+          <span class="time-tag">ca. 100 min · mit Taschenrechner</span>
+          <h2>3. Investitionsrechnung &amp; Kennzahlen</h2>
+          <div class="table-wrap"><table>
+            <tr><th>statisch (non-discounted)</th><th>dynamisch (discounted)</th><th>value-orientiert</th></tr>
+            <tr><td>ROI, Payback statisch</td><td>NPV, IRR, Baldwin-Zinsfuß, Payback dynamisch</td><td>Value at Stake (VaS)</td></tr>
+          </table></div>
+          <p>Statische Verfahren sind <b>zeitunabhängig</b>. Dynamische berücksichtigen den Zeitpunkt der Zahlungen und sind <b>aussagekräftiger</b>.</p>
+
+          <h3>ROI (Rentabilitätsrechnung)</h3>
+          <div class="formel">kumulierter ROI = Gesamtnutzen / Kapitaleinsatz × 100<br>Beispiel: 24 Mio. / 20 Mio. = 120 %  (Investition A: 16/20 = 80 %)<br><br>anglo-amerikanisch: (Gesamtnutzen − Kapitaleinsatz) / Kapitaleinsatz<br>Beispiel: (24 − 20) / 20 = 20 %  (A: −20 %)</div>
+          <p><b>Kriterium:</b> ROI &gt; 100 % (Kostendeckung), bzw. &gt; 0 % bei der Variante. Bei mehreren Projekten gewinnt der höchste ROI.</p>
+          <p><b>Schwäche:</b> Es ist nicht einheitlich definiert, was „Kapitaleinsatz“ ist. Zählen nur die Einmalkosten oder auch die Betriebskosten?</p>
+
+          <h3>Payback (Amortisation)</h3>
+          <div class="formel">statisch: Investition / jährlicher Rückfluss<br>400.000 € / 125.000 € = 3,2 Jahre<br>Bei ungleichen Rückflüssen kumulieren, bis die Investition erreicht ist (Rest anteilig).</div>
+          <p><b>Dynamischer Payback:</b> Man kumuliert die <b>abgezinsten</b> Rückflüsse. Das ist genauer und bei i &gt; 0 immer <b>länger</b> als der statische Payback.</p>
+          <div class="formel">I0 = 100.000, je 50.000 / Jahr, i = 10 %:<br>Barwerte 45.455 + 41.322 = 86.777 nach 2 Jahren → fehlen 13.223<br>13.223 / 37.566 (Barwert J3) = 0,35 → dynamischer Payback ≈ 2,35 Jahre (statisch: 2,0)</div>
+
+          <h3>Abzinsung und NPV (Kapitalwert)</h3>
+          <div class="formel">Abzinsungsfaktor = 1 / (1 + i)^t        i = 10 %: J1 0,9091 · J2 0,8264 · J3 0,7513<br>                                         i = 12 %: J1 0,8929 · J2 0,7972 · J3 0,7118 · J4 0,6355<br>NPV = −I0 + Σ CF_t / (1 + i)^t</div>
+          <p>Der <b>NPV</b> ist der Betrag, der <b>über Mitteleinsatz und kalkulatorische Zinsen hinaus</b> verdient wird, abgezinst auf t0. Bei <b>NPV &gt; 0</b> ist die Investition vorteilhaft.</p>
+          <div class="formel">Beispiel Skript (12 %): Kosten 30 Mio. → diskontiert 28,929 Mio.; Nutzen 75 Mio. → 56,2835 Mio.<br>Undiskontiert: Delta 45 Mio. · Diskontiert: NPV = 27,3545 Mio.<br><br>Übung: I0 = 100.000, 3 × 40.000, i = 10 % → 40.000 × 2,4869 = 99.474 → NPV ≈ −526 €<br>(statisch +20.000 € – dynamisch knapp unvorteilhaft!)</div>
+          <ul>
+            <li><b>IRR (interner Zinsfuß):</b> der Zinssatz, den das gebundene Kapital erzielt, also der Zins, bei dem NPV = 0 ist. Bei IRR &gt; Kalkulationszins ist der NPV positiv.</li>
+            <li><b>Baldwin-Zinsfuß:</b> wie IRR, aber unter der Annahme, dass Überschüsse zu einer bestimmten Unternehmensrendite wiederangelegt werden.</li>
+            <li><b>Value at Stake:</b> baut auf dem <b>Residualgewinn</b> auf (Synonyme: EVA, Economic Profit, OPAC). Das ist der Gewinn <b>nach Abzug der Kapitalkosten</b> auf Restbuchwert und Umlaufvermögen. Die jährlichen Werte werden diskontiert und summiert.</li>
+          </ul>
+
+          <h3>Kapitalkosten (Kalkulationszinssatz)</h3>
+          <div class="formel">FK-Kosten nach Steuern = Zins × (1 − Steuersatz)      6 % × (1 − 0,25) = 4,5 %<br>EK-Kosten (CAPM) = risikofreier Zins + (Marktrendite − risikofreier Zins) × Beta<br>                  4,5 % + (8 % − 4,5 %) × 1,3 = 9,05 %<br>WACC = EK-Anteil × EK-Kosten + FK-Anteil × FK-Kosten (nach Steuern)<br>       0,4 × 10 % + 0,6 × 4 % = 6,4 %</div>
+          <ul>
+            <li>Beta &gt; 1 heißt: schwankt stärker als der Markt, also riskanter. Beta &lt; 1 heißt: weniger riskant.</li>
+            <li>Die <b>Marktrisikoprämie</b> ist Aktienindex-Rendite minus Rendite quasi risikoloser Staatsanleihen.</li>
+            <li>Der EK-Wert entspricht bei börsennotierten Unternehmen der Marktkapitalisierung, sonst dem <b>Buchwert</b>. Den FK-Wert liest man aus der Bilanz.</li>
+            <li>„Tax matters“: Im Konzern beeinflusst die Steuerquote, in welchem Land sich eine Investition am besten rechnet.</li>
+          </ul>
+          <div class="merke">Dein eigener BC rechnet mit 7,1 % WACC: NPV 170.200 €, Payback 3,2 Jahre, ROI 143 %. Wenn du dessen Logik erklären kannst, beherrschst du dieses Kapitel.</div>
+          <p class="practice-link"><a class="btn btn-outline" href="quiz.html?topic=kennzahlen">Jetzt üben: Kennzahlen &amp; Rechnen</a></p>
+        </section>
+
+        <!-- ============ 4 ============ -->
+        <section id="strategie">
+          <span class="time-tag">ca. 75 min</span>
+          <h2>4. Strategiebegriff &amp; Strategiearten</h2>
+          <h3>Strategie</h3>
+          <ul>
+            <li><b>Kern:</b> Vision, Selbstverständnis und Grundwerte, Kernkompetenzen, Marktpositionierung. <b>Außen herum:</b> operative Ziele, Produkte und Leistungen, Zielgruppen und Marktsegmente, alles eingebettet ins Unternehmensumfeld.</li>
+            <li><b>Charakteristika:</b> Zielbezogenheit, kreativer und innovativer Charakter (kaum standardisierbar), Selektivität (Segmente wählen), Lenkungsfunktion (Rahmen für langfristige Maßnahmen), Umwelt- und Wettbewerbsbezogenheit.</li>
+            <li><b>Anforderungen an eine Strategie:</b> Sie umfasst Leitidee und Vision, künftige Geschäftsfelder, Kernkompetenzen, Marktpositionierung und die Nutzenpotenziale samt den dafür nötigen Ressourcen.</li>
+            <li><b>Leitbild:</b> Beispiel sind die HP-Unternehmensziele (Gewinn, Kunden, Betätigungsgebiet, Wachstum, Mitarbeiter, Führungsstil, gesellschaftliche Verantwortung).</li>
+          </ul>
+          <h3>Strategische Erfolgspositionen (SEP)</h3>
+          <ul>
+            <li>Strategisches Management heißt <b>Aufbau, Pflege und Ausbeutung von SEP</b>. Synonyme: Wettbewerbsvorteil, <b>USP</b>, strategischer Erfolgsfaktor, Kernkompetenz.</li>
+            <li><b>Anforderungen:</b> <b>wichtig</b> (für Abnehmer), <b>wahrgenommen</b>, <b>dauerhaft</b> (nicht sofort nachahmbar).</li>
+            <li><b>Pyramide:</b> Ressourcen und Know-how → Kompetenzen → Kernkompetenzen → <b>Alleinstellungsmerkmale</b>.</li>
+            <li><b>Entwicklung entlang der Wertschöpfungskette (Porter):</b>
+              <ul>
+                <li>Primäraktivitäten: interne Logistik, Produktion, externe Logistik, Marketing und Verkauf, Service</li>
+                <li>Unterstützungsaktivitäten: Infrastruktur, HRM, Technologieentwicklung, Beschaffung</li>
+                <li>Am Ende steht die Marge.</li>
+              </ul>
+            </li>
+            <li><b>Beispiele:</b> 3M (Innovationsfähigkeit), McDonald’s (Standortwahl).</li>
+          </ul>
+          <h3>SGF und SGE</h3>
+          <ul>
+            <li><b>SGF</b> (strategisches Geschäftsfeld) ist <b>extern</b>: Attraktivität und Erfolgspotential (Kundengruppen, Kundenfunktionen, Technik).</li>
+            <li><b>SGE</b> (strategische Geschäftseinheit) ist <b>intern</b>: Fähigkeiten und Leistungspotential (Marketing, F&amp;E, Produktion, Planung).</li>
+          </ul>
+          <p><b>SGE sollen:</b></p>
+          <ul>
+            <li>eine organisatorische Einheit bilden und in ihrer Marktaufgabe eigenständig sein</li>
+            <li>sich von der Konkurrenz abheben und eine bedeutende Marktstellung erreichen können</li>
+            <li><b>in sich homogen und untereinander heterogen</b> sein</li>
+            <li>ein eigenständiges Bedürfnis einer Zielgruppe erfüllen</li>
+            <li>Erträge und Kosten zugerechnet bekommen (allein lebensfähig)</li>
+            <li><b>unbedeutende Synergien</b> mit anderen SGE haben</li>
+          </ul>
+          <p><b>Strategische Verflechtungsmatrix:</b> Technologiefelder (STF) stehen Geschäftsfeldern (SGF) gegenüber, jeweils aktuell und potentiell. Daraus ergeben sich die Technology-Push-Analyse und die Technologierelevanzanalyse.</p>
+          <h3>Unternehmens- vs. Geschäftsstrategie</h3>
+          <p>Strategien beantworten zwei Fragen: In welchen Geschäftsfeldern sind wir tätig? Wie bestreiten wir dort den Wettbewerb? Grundlage ist die Ist-Analyse von Stärken und Schwächen sowie Chancen und Gefahren.</p>
+          <ul>
+            <li><b>Unternehmensstrategie:</b> „Machen wir das <b>richtige</b> Geschäft?“ Sie legt Geschäftsfelder fest und verteilt Kapital und Personal.</li>
+            <li><b>Geschäftsstrategie:</b> „Machen wir das Geschäft <b>richtig</b>?“ Sie setzt die Unternehmensstrategie um und baut SEP auf.</li>
+          </ul>
+          <h3>Arten von Strategien</h3>
+          <ul>
+            <li><b>Wettbewerbsstrategien:</b> Kostenführerschaft, Differenzierung, Fokussierung</li>
+            <li><b>Technologiestrategien:</b> Pionier, Imitation, Nische, Kooperation</li>
+            <li><b>Marketingstrategien:</b>
+              <ul>
+                <li><b>Marktwahl:</b> welche Märkte, welche nicht</li>
+                <li><b>Produkt:</b> Kundennutzen, Qualitäts- oder Preisführerschaft, Sortiment</li>
+                <li><b>Instrumental:</b> Service, Marke, Vertrieb, Kommunikation</li>
+                <li><b>Absatzmittler:</b> Push vs. Pull, Selektion der Händler</li>
+                <li><b>Konkurrenz:</b> Marktführer, Folger oder Nische; Angriff oder Verteidigung</li>
+              </ul>
+            </li>
+          </ul>
+          <p><b>Ansoff-Entwicklungsstufen:</b></p>
+          <ul>
+            <li>Management by Control: stabiles Umfeld</li>
+            <li>Management by Extrapolation: instabile Märkte</li>
+            <li>Management by Anticipation: handhabbare Märkte</li>
+            <li>Management by Flexible/Rapid Response: unvorhersehbare Überraschungen</li>
+          </ul>
+          <div class="table-wrap"><table>
+            <tr><th>Markteintritt</th><th>Kennzeichen</th></tr>
+            <tr><td>First to Market (Pionier)</td><td>hohe Forschungsintensität und F&amp;E-Investitionen, nah am Stand der Technik, Flexibilität und Risikobereitschaft</td></tr>
+            <tr><td>Follow the Leader</td><td>intensive Entwicklung, ständige Reaktionsbereitschaft, Anwendungsorientierung, weniger Kompetenz und F&amp;E als der Pionier</td></tr>
+            <tr><td>Application Engineering</td><td>strikt an Kundenanforderungen orientiert, enge Kooperation Verkauf und Entwicklung, geringe F&amp;E, Kostenorientierung</td></tr>
+            <tr><td>Me too</td><td>Imitation, rationelle Produktion, minimale F&amp;E, alle Kostenvorteile nutzen</td></tr>
+          </table></div>
+          <h3>Wettbewerbsstrategien nach Porter</h3>
+          <p>Zwei Dimensionen bestimmen die Strategie: <b>Kosten- vs. Leistungsvorteil</b> und <b>Gesamt- vs. Teilmarkt</b>.</p>
+          <div class="table-wrap"><table>
+            <tr><th></th><th>Leistungsvorteil</th><th>Kostenvorteil</th></tr>
+            <tr><th>Gesamtmarkt</th><td>Qualitätsführerschaft (IBM)</td><td>aggressive Kostenführerschaft (Vobis)</td></tr>
+            <tr><th>Teilmarkt / Nische</th><td>selektive Qualitätsführerschaft (Toshiba)</td><td>selektive Kostenführerschaft (Acer), oft mit Imitation</td></tr>
+          </table></div>
+          <div class="merke">Eine „mittlere“ Position gibt es nicht. Das ist der „Verlust der Mitte“ (Beispiele: Factory Outlet Parndorf, „Nur ein Mercedes ist ein Mercedes“).</div>
+          <p class="practice-link"><a class="btn btn-outline" href="quiz.html?topic=strategie">Jetzt üben: Strategie</a></p>
+        </section>
+
+        <!-- ============ 5 ============ -->
+        <section id="analyse">
+          <span class="time-tag">ca. 70 min</span>
+          <h2>5. Strategische Analyseinstrumente</h2>
+          <h3>Technologielebenszyklus</h3>
+          <div class="table-wrap"><table>
+            <tr><th>Phase</th><th>Entstehung</th><th>Wachstum</th><th>Reife</th><th>Degeneration</th></tr>
+            <tr><th>Technologie</th><td>Schrittmacher</td><td>Schlüssel</td><td>Basis</td><td>verdrängt</td></tr>
+            <tr><th>Anwendungsvolumen</th><td>unbekannt</td><td>groß</td><td>stabil</td><td>abnehmend</td></tr>
+            <tr><th>Entwicklungsanforderung</th><td>wissenschaftlich</td><td colspan="2">anwendungsorientiert</td><td>kostenorientiert</td></tr>
+            <tr><th>F&amp;E-Investitionen</th><td>mittel</td><td>hoch</td><td>niedrig</td><td>vernachlässigbar</td></tr>
+            <tr><th>Technisches Risiko</th><td>hoch</td><td>mittel</td><td>niedrig</td><td>sehr niedrig</td></tr>
+            <tr><th>Eintrittsbarriere</th><td>F&amp;E-Potential</td><td>Personal</td><td>Lizenzen</td><td>Anwendungs-Know-how</td></tr>
+          </table></div>
+          <ul>
+            <li><b>Schrittmacher:</b> großes Wettbewerbspotential für die Zukunft.</li>
+            <li><b>Schlüssel:</b> stark wettbewerbsbeeinflussend, patentgeschützt, hohes Verbesserungspotential.</li>
+            <li><b>Basis:</b> allgemein bekannt, kein Wettbewerbsvorteil mehr.</li>
+            <li><b>Verdrängt:</b> wird gerade verdrängt oder wurde verdrängt.</li>
+          </ul>
+          <p><b>S-Kurve (McKinsey):</b> Die Leistungsfähigkeit einer Technologie wächst mit dem kumulierten F&amp;E-Aufwand, bis sie an ihre <b>Grenze</b> stößt. Dann lohnt der Wechsel auf die neue Technologie mit höherer Grenze.</p>
+          <p><b>Erfahrungskurve:</b> Bei jeder <b>Verdoppelung der kumulierten Menge</b> sinken die Stückkosten um 20 bis 30 %. Bei Speichermedien zeigt Christensen eine 53-%-Kurve. Rechenbeispiel bei 20 %: 10 € → 8 € → 6,40 €.</p>
+          <p>Ursachen: bessere Kapazitätsauslastung, Einkaufsvorteile, Fixkostendegression, Lerneffekte und weniger Ausschuss. Die Kurve gibt Hinweise auf die langfristige Kosten- und Gewinnsituation.</p>
+
+          <h3>Portfolioanalysen</h3>
+          <p>Portfolioanalysen sind sehr verbreitet und geben einen mehrdimensionalen Überblick. Sie sind <b>nicht</b> geeignet, Strategien inhaltlich auszufüllen. Ihr Ursprung liegt bei der Risikostreuung von Wertpapier-Portfolios.</p>
+          <p><b>BCG-Portfolio</b> (Wachstums-/Marktanteils-Portfolio):</p>
+          <ul>
+            <li>x-Achse: <b>relativer Marktanteil</b> = eigener Anteil / Anteil des <b>stärksten Konkurrenten</b>. Die Grenze liegt bei 1.</li>
+            <li>y-Achse: <b>Marktwachstum</b>.</li>
+          </ul>
+          <div class="table-wrap"><table>
+            <tr><th></th><th>niedriger rel. Marktanteil</th><th>hoher rel. Marktanteil</th></tr>
+            <tr><th>hohes Wachstum</th><td><b>Question Mark</b>: selektiv ausbauen oder abbauen; Erweiterungsinvestition oder Verkauf</td><td><b>Star</b>: halten bzw. leicht ausbauen; Netto-Cashflow reinvestieren; Risiko akzeptieren</td></tr>
+            <tr><th>niedriges Wachstum</th><td><b>Poor Dog</b>: Marktanteil abbauen; Anlagen verkaufen bzw. stilllegen; Risiko stark reduzieren</td><td><b>Cash Cow</b>: halten bzw. leicht abbauen; nur Rationalisierungs- und Ersatzinvestitionen; „melken“</td></tr>
+          </table></div>
+          <div class="formel">Riegel-Beispiel: rel. Marktanteil = Umsatz / Umsatz stärkster Konkurrent<br>Nuss 24/15 = 1,6 · 4 % → Cash Cow     Schoko 30/16,7 = 1,8 · 0 % → Cash Cow<br>Knusper 6/7,5 = 0,8 · 14 % → Question Mark   Krokant 8/5,7 = 1,4 · 16 % → Star<br>Nougat 10/50 = 0,2 · −4 % → Poor Dog (einstellen)</div>
+          <p><b>Mängel der BCG-Matrix:</b> Sie hilft nicht bei der Marktdefinition. Der Marktanteil zeigt nicht zwingend die Cash-Zuflüsse an, das Wachstum nicht zwingend den Cashbedarf. Die Normstrategien sind zu simpel. Positiv: Sie visualisiert die Vergangenheit und zeigt das Portfolio auf einen Blick. Sie ist mit Branchenlebenszyklus und Erfahrungskurve verknüpft.</p>
+          <p><b>McKinsey-Portfolio</b> (9 Felder):</p>
+          <ul>
+            <li><b>Marktattraktivität:</b> Wachstum und Größe, Marktqualität, Energie- und Rohstoffversorgung, Umfeld.</li>
+            <li><b>Relative Wettbewerbsvorteile:</b> Marktposition, Produktionspotential, F&amp;E-Potential, Qualifikation der Führungskräfte. Alles wird im Vergleich zum stärksten Konkurrenten gemessen.</li>
+            <li>Die Verknüpfung erfolgt über ein <b>Punktbewertungsmodell</b>.</li>
+            <li><b>Normstrategien:</b> hoch/hoch bedeutet Investition, Marktführerschaft halten. Niedrig/niedrig bedeutet Desinvestition. Hohe Attraktivität bei niedrigem Vorteil bedeutet Investition oder Rückzug. Niedrige Attraktivität bei hohem Vorteil bedeutet Abschöpfung.</li>
+          </ul>
+          <p><b>Veränderungsportfolio:</b> Veränderung des Umsatzes gegenüber Veränderung des DB.</p>
+
+          <h3>Ansoff-Matrix</h3>
+          <div class="table-wrap"><table>
+            <tr><th></th><th>bestehende Märkte</th><th>neue Märkte</th></tr>
+            <tr><th>bestehende Produkte</th><td><b>Marktdurchdringung</b>: mehr Werbung, Preissenkung, Kunden der Konkurrenz abwerben</td><td><b>Marktentwicklung</b>: neue Regionen, Länder, Anwendungsbereiche, Segmente</td></tr>
+            <tr><th>neue Produkte</th><td><b>Produktentwicklung</b>: Innovation, Differenzierung, Me-too</td><td><b>Diversifikation</b>: horizontal (ähnlich, gleiche Stufe), vertikal (vor- oder nachgelagert), lateral (ohne Zusammenhang)</td></tr>
+          </table></div>
+
+          <h3>Five Forces (Porter) – Branchenstrukturanalyse</h3>
+          <p>Fünf Kräfte bestimmen die Rendite einer Branche:</p>
+          <ul>
+            <li><b>Rivalität</b> der bestehenden Wettbewerber: Austrittsbarrieren, Anzahl Player, Marktwachstum</li>
+            <li><b>Neue Konkurrenten</b>: Eintrittsbarrieren, Economies of Scale, Kapitalbedarf</li>
+            <li><b>Ersatzprodukte</b>: Preis-Leistung, Differenzierung</li>
+            <li>Verhandlungsstärke der <b>Lieferanten</b></li>
+            <li>Verhandlungsstärke der <b>Abnehmer</b></li>
+          </ul>
+          <p>Kriterien für die beiden Verhandlungsstärken: Konzentrationsgrad, Umsatzanteil, Drohung der Vorwärts- oder Rückwärtsintegration, Umstellungskosten.</p>
+          <h3>7-S-Modell (McKinsey)</h3>
+          <ul>
+            <li><b>Harte Faktoren:</b> Strategy, Structure, Systems.</li>
+            <li><b>Weiche Faktoren:</b> Skills, Staff, Style, <b>Shared Values</b>. Shared Values stehen im Zentrum.</li>
+          </ul>
+          <h3>Stage-Gate-Prozess</h3>
+          <ul>
+            <li><b>Phasen:</b> Ideengenerierung → Exploration → Machbarkeit → Transfer → Serienentwicklung.</li>
+            <li><b>Gates:</b> 1 Projektbeginn · 2 Konzeptfreigabe · 3 Produktfreigabe · 4 Design-Festlegung · 5 Erprobung · 6 Markteinführung.</li>
+            <li>Feste Regeln an jedem Gate: weiter, abbrechen, warten oder zurück. Selektions- und Abbruchkriterien werden offengelegt und dokumentiert.</li>
+          </ul>
+          <h3>GAP-Analyse, PIMS, Risikofaktoren</h3>
+          <ul>
+            <li><b>GAP:</b> die Lücke zwischen angestrebtem Soll und dem Zustand, der ohne zusätzliche Maßnahmen erreichbar ist. Sie wird über strategische oder operative Maßnahmen geschlossen (Ansoff-Strategien).</li>
+            <li><b>PIMS</b> (Profit Impact of Market Strategies):
+              <ul>
+                <li>empirische Datenbank am Strategic Planning Institute in Cambridge (MA): rund 400 Firmen, rund 3.000 Geschäftseinheiten, über 200 Daten je Einheit</li>
+                <li>rund <b>30 Einflussfaktoren</b> auf den <b>ROI bzw. Cashflow</b>, also <b>nicht monokausal</b></li>
+                <li>Top-4-Faktoren: <b>Investitionsintensität, Produktivität, Marktanteil, vertikale Integration</b></li>
+                <li>Grundannahmen: Universalität der Gesetze, Existenz von Marktgesetzen, Erlernbarkeit</li>
+                <li>Grenzen: hohe Kosten, hohe Komplexität, kann <b>keine neuen Märkte identifizieren</b></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="table-wrap"><table>
+            <tr><th>interne Risiken</th><th>externe Risiken</th></tr>
+            <tr><td>technisches Realisationsrisiko (kein Ergebnis), <b>Serendipitätsrisiko</b> (ein anderes Ergebnis), Kostenrisiko, Zeitrisiko</td><td>Verwertungsrisiko (fertigungstechnisch), mangelnde Nachfrage (Konkurrenz für eigene Produkte), Innovationsrisiko (Patent), mangelnder Beitrag zur Zielerreichung</td></tr>
+          </table></div>
+          <p class="practice-link"><a class="btn btn-outline" href="quiz.html?topic=analyse">Jetzt üben: Analyseinstrumente</a></p>
+        </section>
+
+        <!-- ============ 6 ============ -->
+        <section id="pricing">
+          <span class="time-tag">ca. 20 min</span>
+          <h2>6. Pricing (Exkurs, Simon-Kucher)</h2>
+          <p>Im Grunde geht es darum, <b>die volle Zahlungsbereitschaft abzuschöpfen</b>. Gewinn = Preis × Menge − Kosten. Der Preis wirkt <b>multiplikativ</b> und wird oft schlecht gemanagt. Bei der Menge sind die Möglichkeiten eingeschränkt, bei den Kosten ist oft schon alles ausgereizt.</p>
+          <div class="formel">Preis 100 · var. Kosten 60 · Menge 1 Mio. · Fixkosten 30 Mio. → Gewinn 10 Mio.<br>10 % besser bei: Fixkosten → 13 Mio. (+30 %) · Menge → 14 Mio. (+40 %)<br>                 var. Kosten → 16 Mio. (+60 %) · Preis → 20 Mio. (+100 %)<br>Preissenkung −10 %: DB/Stück 40 → 30 ⇒ Menge muss um 40/30 − 1 = +33,3 % steigen</div>
+          <ul>
+            <li><b>Pricing-Prozess:</b>
+              <ul>
+                <li>Preisstrategie: Ziele, Positionierung, Segmentierung</li>
+                <li>Preissetzung: Bündel oder Einzelpreise, profitoptimales Preisniveau, Preisdifferenzierung</li>
+                <li>Preisimplementierung: Verhandlungen, Änderungsmanagement</li>
+                <li>Darüber das Preismanagement: Incentives, Organisation, „Kultur des Profits“</li>
+              </ul>
+            </li>
+            <li><b>Herausforderung:</b> Sales will niedrige Preise, Product eine Markenprämie, Marketing Value Pricing, Finance Zielmargen. Zu viele Leute, Meinungen und Daten, zu wenig Zeit.</li>
+            <li><b>Warren Buffett:</b> Die wichtigste Entscheidung bei der Bewertung eines Unternehmens ist die <b>Pricing Power</b>.</li>
+            <li><b>Psychologie, The Economist:</b> Eine Köder-Option „nur Print“ um 125 $ hat den Anteil von „Print + Online“ von 32 % auf 84 % gehoben. Der Umsatz pro Kunde stieg von 80,12 $ auf 114,44 $ (+43 %).</li>
+            <li><b>Worst Practice:</b> Ein TV-Logistiker hatte einen Preis pro Gerät über 5 Jahre fixiert. Die Geräte wurden größer, das führte zu Verlusten. Lösung: Preis nach Displaygröße.</li>
+            <li><b>Value-based Pricing bzw. Preismodellinnovation:</b>
+              <ul>
+                <li>Michelin: Preis pro km statt pro Reifen</li>
+                <li>Schindler: Nutzungsrechte und Leasing statt Aufzugsverkauf</li>
+                <li>Medizinroboter: Preis pro Operation</li>
+                <li>Wasseraufbereitung: Preis pro Liter geklärtes Wasser</li>
+                <li>Heizung: Preis pro produzierte Wärme</li>
+                <li>GE: Preis pro produktive Motorstunde</li>
+              </ul>
+            </li>
+          </ul>
+          <p class="practice-link"><a class="btn btn-outline" href="quiz.html?topic=pricing">Jetzt üben: Pricing</a></p>
+        </section>
+
+        <!-- ============ 7 ============ -->
+        <section id="gruendung">
+          <span class="time-tag">ca. 45 min</span>
+          <h2>7. Gründung – Gewerbe, Rechtsformen, Ablauf (WKO 2026)</h2>
+          <h3>Gewerberecht</h3>
+          <p><b>Gewerbsmäßig</b> heißt: <b>selbstständig</b>, <b>regelmäßig</b> und in <b>Ertragserzielungsabsicht</b>. Die Gewerbeanmeldung ist <b>kostenlos</b>.</p>
+          <div class="table-wrap"><table>
+            <tr><th>Art</th><th>Befähigungsnachweis</th><th>Ausübung ab</th><th>Beispiele</th></tr>
+            <tr><td>Freies Gewerbe</td><td>nein</td><td>Anmeldung</td><td>Handel, Werbeagentur, Büroservice, Datenverarbeitung</td></tr>
+            <tr><td>Reglementiertes Gewerbe/Handwerk</td><td>ja</td><td>Anmeldung (mit Nachweis)</td><td>Unternehmensberatung, Tischler, Kosmetik</td></tr>
+            <tr><td>Rechtskraftgewerbe</td><td>ja + Zuverlässigkeitsprüfung</td><td><b>rechtskräftiger Bescheid</b></td><td>Baumeister, Pyrotechnik, Gas/Sanitär</td></tr>
+          </table></div>
+          <ul>
+            <li>Der Befähigungsnachweis ist <b>personengebunden, nicht übertragbar</b>.</li>
+            <li><b>Ohne eigenen Nachweis:</b> individuelle Befähigung (§ 19 GewO), Prüfung ablegen, Gesellschaft mit befähigtem unbeschränkt Haftenden gründen, oder eine <b>gewerberechtliche Geschäftsführung</b> anstellen (mindestens halbe Normalarbeitszeit, mindestens 20 Wochenstunden).</li>
+            <li><b>Allgemeine Voraussetzungen:</b> 18 Jahre und geschäftsfähig, EU/EWR oder Aufenthaltstitel, keine Ausschlussgründe.</li>
+            <li><b>Nebenrechte:</b> bis <b>30 %</b> des Jahresumsatzes aus anderen Gewerben, aus reglementierten nur bis <b>15 %</b> des Auftragswertes.</li>
+          </ul>
+          <h3>Rechtsformen</h3>
+          <div class="table-wrap"><table>
+            <tr><th>Rechtsform</th><th>Haftung</th><th>Gründung / Kapital</th><th>Steuer / SV</th></tr>
+            <tr><td>Einzelunternehmen</td><td>unbeschränkt, privat</td><td>mit der Gewerbeanmeldung; Firmenbuch ab 700.000 € Umsatz (2×), dann „e.U.“</td><td>ESt 0–55 %, GSVG</td></tr>
+            <tr><td>OG (≥ 2)</td><td>unmittelbar, <b>solidarisch</b>, unbeschränkt</td><td>Vertrag <b>formfrei</b>; entsteht mit <b>Firmenbucheintrag</b></td><td>Gesellschafter versteuern Anteile, GSVG</td></tr>
+            <tr><td>KG</td><td>Komplementär unbeschränkt, Kommanditist bis zur Haftsumme</td><td>formfrei, Firmenbuch; Kommanditist nicht im Firmennamen</td><td>Kommanditist haftet bei der Kommunalsteuer unbeschränkt</td></tr>
+            <tr><td>GmbH</td><td>Gesellschaftsvermögen</td><td><b>10.000 €</b> Stammkapital, Hälfte bar; <b>Notariatsakt</b> (vereinfacht § 9a: 1 natürliche Person, digital)</td><td><b>KöSt 23 %</b>, Mindest-KöSt 500 €, KESt 27,5 %; doppelte Buchhaltung Pflicht</td></tr>
+            <tr><td>FlexKapG (FlexCo)</td><td>wie GmbH</td><td>10.000 €, mind. 5.000 € bar; Unternehmenswert-Anteile bis 24,99 % (ohne Stimmrecht, nicht im Firmenbuch); Umlaufbeschlüsse</td><td>wie GmbH; nicht für Kleinbetriebe gedacht</td></tr>
+          </table></div>
+          <p><b>GmbH-Geschäftsführer-Gesellschafter in der SV:</b> bis 25 % Beteiligung ASVG; über 25 % bis unter 50 % ASVG bei Weisungsbindung, sonst GSVG; <b>ab 50 % immer GSVG</b>. Bei der GmbH haftet zwar das Gesellschaftsvermögen, in der Praxis verlangen Banken aber Bürgschaften.</p>
+          <p><b>Gesellschaft statt allein:</b> Vorteile sind Know-how, Arbeitsteilung, Kapital und geteiltes Risiko. Nachteile sind weniger Entscheidungsfreiheit, Haftung für andere und langsamere Entscheidungen.</p>
+          <p><b>Pflichtangaben</b> eingetragener Unternehmen (Briefe, E-Mails, Website): Firma, Rechtsform, Sitz, Firmenbuchnummer, Firmenbuchgericht.</p>
+          <h3>Ablauf und Behörden</h3>
+          <ul>
+            <li><b>Gründungsschritte:</b> EU 7, OG/KG 9, GmbH/FlexKapG 11.</li>
+            <li><b>Typischer Weg:</b> Beratung → NeuFöG (Formular NeuFö 2) → Gewerbeanmeldung → ÖGK (falls Personal) → SVS → Finanzamt → Gemeinde.</li>
+            <li><b>ÖGK:</b> Mitarbeiter <b>vor Arbeitsantritt</b> anmelden.</li>
+            <li><b>Finanzamt:</b> <b>innerhalb eines Monats</b> melden. Fragebogen Verf24 (EU), Verf16 (Personengesellschaft), Verf15 (Kapitalgesellschaft).</li>
+            <li><b>SVS:</b> Anmeldung innerhalb eines Monats, die Mitteilung kommt automatisch.</li>
+            <li><b>NeuFöG</b> befreit von Gerichtsgebühren (Firmenbuch), Stempelgebühren und Verwaltungsabgaben sowie <b>Lohnabgaben (ca. 6 %) in den ersten 36 Monaten</b>. Voraussetzungen: neue Struktur, 5 Jahre keine gleichartige Tätigkeit, Beratung.</li>
+            <li><b>Betriebsanlage:</b> genehmigungspflichtig, wenn sie Gefährdungen oder Belästigungen verursachen kann. Freigestellt sind z. B. Einzelhandel bis 600 m² und Beherbergung bis 30 Betten. Im vereinfachten Verfahren haben die Nachbarn <b>keine Parteistellung</b>.</li>
+            <li><b>Standort:</b> harte Faktoren (Erreichbarkeit, Kaufkraft, Frequenz, Kosten, Widmung) und weiche Faktoren (Image, Klima, Milieu).</li>
+          </ul>
+          <h3>Recht im Alltag</h3>
+          <ul>
+            <li><b>Wege zur Idee:</b> neue Idee, Bewährtes verbessern, Nachfolge, Franchising, Outsourcing. Im Fokus stehen <b>Problemlösung und Kundennutzen</b>.</li>
+            <li><b>Verträge:</b>
+              <ul>
+                <li>Dienstvertrag: weisungsgebunden, Zeit und Ort fix</li>
+                <li>freier Dienstvertrag: keine Weisungen</li>
+                <li>Werkvertrag: Erfolg geschuldet</li>
+                <li>Probezeit max. <b>1 Monat</b></li>
+              </ul>
+            </li>
+            <li><b>Gewährleistung</b> ist gesetzlich und verschuldensunabhängig: 2 Jahre für bewegliche, 3 Jahre für unbewegliche Sachen. Die Garantie ist freiwillig. Schadenersatz setzt Verschulden voraus. Produkthaftung ist verschuldensunabhängig und deckt nur Folgeschäden.</li>
+            <li><b>Schutzrechte:</b> Patent max. 20 Jahre, Gebrauchsmuster max. 10 Jahre, Urheberrecht bis 70 Jahre nach dem Tod (ohne Register).</li>
+          </ul>
+          <p class="practice-link"><a class="btn btn-outline" href="quiz.html?topic=gruendung">Jetzt üben: Gründung – Recht</a></p>
+        </section>
+
+        <!-- ============ 8 ============ -->
+        <section id="planung">
+          <span class="time-tag">ca. 45 min</span>
+          <h2>8. Gründung – Planung, Finanzierung, Steuern &amp; SV</h2>
+          <h3>Businessplan und Planrechnung</h3>
+          <ul>
+            <li><b>Businessplan:</b> Executive Summary (vorne, aber <b>zuletzt geschrieben</b>), Produkt, Markt und Wettbewerb, Marketing und Vertrieb, Unternehmen und Management, Erfolgs- und Finanzplanung, Meilensteine, Anhang. Umfang bis 20 Seiten. Tools: Plan4You, i2b.</li>
+            <li><b>Planrechnung:</b> die ersten <b>4 Jahre</b>, das 1. Jahr monatlich oder quartalsweise. Erlöse in drei Szenarien: Best Case (aggressiv), Most Likely (realistisch), Worst Case (konservativ).</li>
+          </ul>
+          <div class="formel">Erlöse − variable Kosten = Deckungsbeitrag<br>Deckungsbeitrag − Personalkosten − sonstige Fixkosten = Betriebsergebnis<br>Personalkosten ≈ Bruttomonatslohn × 14 + 30 %      lineare AfA = AK / Nutzungsdauer (Pkw 8 J.)<br>Stundensatz = Mindestumsatz / verkaufbare Stunden   (46 Wo × 5 × 8 = 1.840 h − 30 % = 1.288 h)</div>
+          <ul>
+            <li><b>Kalkulatorischer Unternehmerlohn:</b> mindestens 25.000 €.</li>
+            <li><b>GWG:</b> bis 1.000 €.</li>
+            <li><b>Kapitalbedarf</b> = Investitionen + Lager + Start- und laufende Kosten (inklusive Privatentnahmen) + Reserve.</li>
+            <li><b>Finanzplan</b> (monatlich) sichert die <b>Liquidität</b>.</li>
+          </ul>
+          <h3>Finanzierung</h3>
+          <ul>
+            <li><b>Eigenkapitalanteil:</b> Banken erwarten 20–30 %.</li>
+            <li><b>Investitionskredit</b> für Anlagen, 4–20 Jahre. Fristenkongruenz: Laufzeit gleich Nutzungsdauer.</li>
+            <li><b>Kontokorrentkredit:</b> laufender Zahlungsverkehr, teuer, nur kurzfristig.</li>
+            <li><b>Leasing:</b> Das Eigentum bleibt beim Leasinggeber.</li>
+            <li><b>Venture Capital</b> ab ca. 400.000 €, <b>Business Angels</b> ab 20.000 € (Geld plus Know-how plus Kontakte), <b>Crowdfunding</b> ab ca. 100 € pro Anleger.</li>
+            <li><b>Lieferantenkredit:</b> der bequemste, aber <b>teuerste</b>. Wer 2 % Skonto (10 Tage) zugunsten von 30 Tagen netto auslässt, zahlt rund 36 % p. a.</li>
+            <li><b>Factoring:</b> Forderungen verkaufen, sofort ca. 80 %.</li>
+            <li><b>Bankgespräch:</b> Effektivzinssatz vergleichen.</li>
+            <li><b>Förderungen:</b> <b>vor</b> Projektbeginn beantragen, kein Rechtsanspruch, meist über die Hausbank.
+              <ul>
+                <li>aws: Förderbank des Bundes</li>
+                <li>FFG: Forschung und Entwicklung</li>
+                <li>ÖHT: Tourismus</li>
+                <li>KPC: Umwelt und Energie</li>
+                <li>AMS: Gründung aus Arbeitslosigkeit, Personal</li>
+              </ul>
+            </li>
+          </ul>
+          <h3>Sozialversicherung (SVS, Werte 2026)</h3>
+          <ul>
+            <li>Kranken- und Pensionsversicherung nach <b>GSVG</b>, Unfallversicherung nach ASVG.</li>
+            <li><b>Beitragssätze:</b> PV <b>18,5 %</b>, KV <b>6,8 %</b>, Selbständigenvorsorge <b>1,53 %</b>, UV fix <b>155,40 €</b> pro Jahr.</li>
+            <li><b>Beitragsgrundlagen:</b> Mindestbeitragsgrundlage <b>6.613,20 €</b>, Höchstbeitragsgrundlage <b>97.020 €</b> pro Jahr.</li>
+            <li><b>Jungunternehmer:</b> KV-Fixbeitrag in den ersten 2 Jahren.</li>
+            <li><b>„Verflixtes 3. Jahr“:</b> Steuer und SV werden laut Bescheid nachverrechnet. Faustregel: je ¼ des Einkommens für Steuer und SV zurücklegen.</li>
+            <li><b>Kleinunternehmerregelung der SVS</b> (nur EU): Gewinn ≤ 6.613,20 € und Umsatz ≤ 55.000 €. Sie befreit von KV, PV und Vorsorge, die <b>UV bleibt</b>.</li>
+          </ul>
+          <h3>Steuern</h3>
+          <ul>
+            <li><b>Einkommensteuer:</b> 0–55 % progressiv, steuerfrei bis <b>13.539 €</b>. <b>Grundfreibetrag:</b> 15 % des Gewinns bis 33.000 €, also max. 4.950 € (nur EU und Personengesellschaften).</li>
+            <li><b>KöSt</b> 23 %, <b>KESt</b> 27,5 %.</li>
+            <li><b>USt:</b> 20 % Normalsatz, 10 % und 13 % ermäßigt. UVA quartalsweise bei Umsatz unter 100.000 €, sonst monatlich.</li>
+            <li><b>Kommunalsteuer</b> 3 % der Lohnsumme, <b>DB</b> 3,7 %.</li>
+            <li><b>Kleinunternehmerregelung der USt:</b> Umsatz unter <b>55.000 € brutto</b>. Man verrechnet keine USt und hat keinen Vorsteuerabzug (<b>unechte</b> Befreiung). Ein Verzicht ist möglich.</li>
+            <li><b>Reverse Charge:</b> Die Steuerschuld geht auf den Empfänger über.</li>
+            <li><b>Kleinbetragsrechnung</b> bis 400 € brutto.</li>
+          </ul>
+          <h3>Buchhaltung</h3>
+          <ul>
+            <li><b>Einnahmen-Ausgaben-Rechnung:</b> Zuflussprinzip, bis 700.000 € Umsatz.</li>
+            <li><b>Doppelte Buchführung:</b> Pflicht ab 700.000 € in 2 Jahren hintereinander (ab dem übernächsten Jahr) bzw. ab 1 Mio. € im nächsten Jahr. <b>Kapitalgesellschaften immer.</b></li>
+            <li><b>Basispauschalierung:</b> bis 420.000 € Vorjahresumsatz.</li>
+            <li><b>Registrierkasse:</b> ab 15.000 € Jahresumsatz <b>und</b> 7.500 € Barumsatz.</li>
+            <li><b>Aufbewahrung:</b> 7 Jahre (Grundstücke bis 22).</li>
+          </ul>
+          <p><b>Marketingmix (4P):</b> Produkt- und Sortimentspolitik, Preispolitik, Distributionspolitik, Kommunikationspolitik. Die <b>SMART</b>-Ziele lauten im Leitfaden: spezifisch, messbar, <b>aktiv</b>, realistisch, terminiert.</p>
+          <p class="practice-link"><a class="btn btn-outline" href="quiz.html?topic=planung">Jetzt üben: Gründung – Planung &amp; Geld</a></p>
+        </section>
+
+        <!-- ============ 9 ============ -->
+        <section id="spick">
+          <h2>9. Spickzettel für den Prüfungstag</h2>
+          <div class="table-wrap"><table>
+            <tr><th>Thema</th><th>Das musst du sicher können</th></tr>
+            <tr><td>BC vs. BP</td><td>BC: ein Projekt, nur intern. BP: ganze Einheit, auch extern. Der BC liefert Daten an den BP.</td></tr>
+            <tr><td>Phasen</td><td>Initialisierung (Organisation, Scope, Analysemodell, Horizont) → Entwicklung → Prüfung (Double Counting)</td></tr>
+            <tr><td>Doku</td><td>Management Summary (zuletzt!) · Projektübersicht (Unterlassungsalternative) · Wirtschaftlichkeitsnachweis · Projektdetails (KEF, KPI)</td></tr>
+            <tr><td>Kosten</td><td>einmalig vs. laufend · extern vs. intern (Backfill, Umlagen, intern verrechnete Leistungen) · Doppelaufwand im Anlauf</td></tr>
+            <tr><td>Nutzen</td><td>direkt monetär · indirekt monetär · nicht monetär (Image, Strategie) · „Profit is an opinion, cash is fact“</td></tr>
+            <tr><td>Verfahren</td><td>statisch: ROI, Payback · dynamisch: NPV, IRR, Baldwin, Payback dyn. · value: VaS (EVA)</td></tr>
+            <tr><td>Formeln</td><td>ROI = Nutzen/Einsatz × 100 (&gt; 100 %) · Payback = I / CF · DF = 1/(1+i)^t · NPV &gt; 0 · FK × (1 − s) · CAPM rf + (rm − rf) × β · WACC gewichtet</td></tr>
+            <tr><td>Strategie</td><td>SEP: wichtig, wahrgenommen, dauerhaft · Unternehmensstrategie: das richtige Geschäft · Geschäftsstrategie: das Geschäft richtig</td></tr>
+            <tr><td>Porter</td><td>IBM, Vobis, Toshiba, Acer · Verlust der Mitte · 5 Forces · Wertschöpfungskette (5 primär + 4 unterstützend)</td></tr>
+            <tr><td>Portfolios</td><td>BCG: rel. Marktanteil × Wachstum (Star, QM, Cow, Dog) · McKinsey: Attraktivität × Wettbewerbsvorteil (Scoring) · Ansoff: Durchdringung, Marktentwicklung, Produktentwicklung, Diversifikation</td></tr>
+            <tr><td>Weitere Tools</td><td>Technologielebenszyklus (Schrittmacher → Schlüssel → Basis → verdrängt) · S-Kurve · Erfahrungskurve (−20–30 % je Verdoppelung) · 7-S (hart: Strategy, Structure, Systems) · Stage-Gate (6 Gates) · GAP · PIMS (ROI, 30 Faktoren, keine neuen Märkte)</td></tr>
+            <tr><td>Pricing</td><td>+10 % Preis = +100 % Gewinn (im Beispiel) · Zahlungsbereitschaft abschöpfen · Value-based Pricing</td></tr>
+            <tr><td>Gründung</td><td>frei, reglementiert, Rechtskraft · GmbH 10.000 € (½ bar), Notariatsakt, KöSt 23 % · OG solidarisch, formfrei, entsteht mit Firmenbuch · NeuFöG · ÖGK vor Arbeitsantritt · Finanzamt binnen 1 Monat</td></tr>
+            <tr><td>Zahlen 2026</td><td>SVS: PV 18,5 %, KV 6,8 %, Vorsorge 1,53 %, UV 155,40 € · Mindestbeitragsgrundlage 6.613,20 € · Höchstbeitragsgrundlage 97.020 € · USt-Kleinunternehmer 55.000 € · ESt frei bis 13.539 € · Buchführungspflicht 700.000 €</td></tr>
+          </table></div>
+          <p class="practice-link"><a class="btn" href="quiz.html?topic=bc,kosten,kennzahlen,strategie,analyse,pricing,gruendung,planung&amp;mode=exam">Prüfungssimulation starten</a></p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">Lernhilfe auf Basis der LV-Unterlagen (Business Case nach Brugger, Strategisches Management, WKO-Gründungsleitfaden 2026). Ohne Gewähr.</footer>
+  <script src="assets/questions.js"></script>
+  <script>document.getElementById("q-count").textContent = window.QUESTIONS.length;</script>
+</body>
+</html>

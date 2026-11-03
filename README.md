@@ -71,6 +71,11 @@ rechnet sich durch die gesamte Datei durch.
 - Nur direkt monetärer Nutzen ist in Euro bewertet; indirekter und nicht monetärer
   Nutzen ist bewusst nicht eingerechnet (keine Doppelzählung)
 
+## Prüfungsvorbereitung (GitHub Pages)
+
+Lernskript für einen Lerntag und ein Fragenkatalog im Stil eines Moodle-Tests (226 Fragen,
+inkl. Rechenaufgaben) unter **https://philip-stack.github.io/MRE3-bGUS/**. Quellcode in `docs/`.
+
 ## Autor
 
 Philip Stix – FH Technikum Wien, Oktober 2026
