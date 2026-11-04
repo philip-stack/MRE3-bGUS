@@ -12,10 +12,10 @@ sind realistische Planannahmen.
 
 | | Status quo | Stationäre Kamera | **Roboter + ML** | Worst Case | Best Case |
 |---|---|---|---|---|---|
-| Investition | – | 250.000 € | **504.200 €** | 600.000 € | 450.000 € |
+| Investition | – | 250.000 € | **505.800 €** | 606.900 € | 450.000 € |
 | Kosten pro Jahr | 700.000 € | 611.000 € | **454.500 €** | 676.200 € | 254.400 € |
 | Beanstandete Teile beim Kunden | 100 ppm | 73 ppm | **47 ppm** | 67 ppm | 40 ppm |
-| Kapitalwert (NPV, 5 Jahre) | – | 111.200 € | **470.100 €** | −570.500 € | 1.365.000 € |
+| Kapitalwert (NPV, 5 Jahre) | – | 111.200 € | **468.500 €** | −577.400 € | 1.365.000 € |
 | Payback statisch | – | 3,0 Jahre | **2,3 Jahre** | > 5 Jahre | 1,2 Jahre |
 | ROI (Σ Nutzen / Σ Kosten) | – | 128 % | **164 %** | 70 % | 326 % |
 
