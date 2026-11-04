@@ -331,3 +331,28 @@ footer.site-footer { text-align: center; color: var(--muted); font-size: 0.8rem;
   .match-table select { width: 100%; }
   .formel { font-size: 0.82rem; }
 }
+
+/* ---------- Lernfortschritt ---------- */
+.progress-pill { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px; font-size: 0.8rem; background: #fcefdc; color: #7d5a29; }
+.progress-pill.done { background: var(--correct-bg); color: var(--correct); }
+.progress-pill.empty { display: none; }
+
+/* ---------- Karteikarten ---------- */
+.flash { max-width: 760px; margin: 0 auto; }
+.flash-meta { display: flex; justify-content: space-between; color: var(--muted); font-size: 0.9rem; margin-bottom: 8px; }
+.flash-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 22px 24px; min-height: 260px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+.flash-card .front { font-size: 1.05rem; }
+.flash-card .front ol { padding-left: 22px; margin: 10px 0 0; }
+.flash-card .front ol li { margin: 3px 0; }
+.flash-card .back { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.flash-card .back .answer { background: var(--correct-bg); border-radius: 6px; padding: 10px 14px; }
+.flash-card .back .answer ul { margin: 4px 0 0; padding-left: 20px; }
+.flash-card .back .explain { background: var(--outcome); color: var(--outcome-text); border-radius: 6px; padding: 10px 14px; margin-top: 10px; }
+.flash-actions { display: flex; gap: 10px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
+.btn-ok { background: var(--correct); border-color: var(--correct); }
+.btn-ok:hover { background: #2a6328; border-color: #2a6328; }
+.btn-bad { background: var(--wrong); border-color: var(--wrong); }
+.btn-bad:hover { background: #a82819; border-color: #a82819; }
+.kbd { display: inline-block; border: 1px solid #c4c8cc; border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; font-size: 0.78rem; color: var(--muted); }
+.flash-bar { height: 6px; background: #e9ecef; border-radius: 3px; overflow: hidden; margin-bottom: 14px; }
+.flash-bar > div { height: 100%; background: var(--primary); width: 0; transition: width .2s; }

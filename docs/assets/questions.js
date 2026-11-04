@@ -1833,7 +1833,7 @@ window.QUESTIONS = [
   { id: "pl41", topic: "planung", type: "single",
     q: "Kleinunternehmerregelung (USt): Was gilt, wenn man die 55.000-€-Grenze innerhalb eines Jahres leicht überschreitet?",
     options: [
-      "Einmalige Toleranz von höchstens 10 % – die Befreiung gilt dann bis zum Ende des Kalenderjahres weiter",
+      "Überschreitung um höchstens 10 % innerhalb eines Jahres erlaubt: die Befreiung gilt dann bis zum Ende des Kalenderjahres weiter",
       "Die Befreiung fällt rückwirkend für das ganze Jahr weg",
       "Es gibt keine Toleranz",
       "Die Grenze verdoppelt sich automatisch",

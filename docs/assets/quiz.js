@@ -304,9 +304,11 @@
         cb.addEventListener("change", () => this.updateCount());
         lbl.appendChild(cb);
         lbl.appendChild(document.createTextNode(" " + TOPICS[key].name + " "));
-        lbl.appendChild(el("span", { class: "pill" }, n + " Fragen"));
+        lbl.appendChild(el("span", { class: "pill" }, key === "rechnen" ? (window.QUIZ_GENERATORS || []).length + " Aufgabentypen" : n + " Fragen"));
+        lbl.appendChild(el("span", { class: "progress-pill", "data-topic": key }));
         box.appendChild(lbl);
       });
+      this.renderProgress();
       const wrong = Object.keys(stats).filter((k) => stats[k].last === "wrong").length;
       $("#wrong-count").textContent = wrong;
       $("#total-count").textContent = ALL.length;
@@ -316,15 +318,31 @@
         if (confirm("Lernstatistik (falsch beantwortete Fragen) wirklich löschen?")) {
           saveStats({});
           $("#wrong-count").textContent = "0";
+          this.renderProgress();
           this.updateCount();
         }
       });
       this.updateCount();
     },
 
+    renderProgress() {
+      const stats = loadStats();
+      document.querySelectorAll(".progress-pill").forEach((sp) => {
+        const key = sp.getAttribute("data-topic");
+        const ids = key === "rechnen"
+          ? (window.QUIZ_GENERATORS || []).map((g) => "gen_" + g.key)
+          : ALL.filter((q) => q.topic === key).map((q) => q.id);
+        const right = ids.filter((id) => stats[id] && stats[id].last === "right").length;
+        const tried = ids.filter((id) => stats[id]).length;
+        sp.textContent = tried ? `${right}/${ids.length} zuletzt richtig` : "";
+        sp.className = "progress-pill" + (tried ? (right === ids.length ? " done" : "") : " empty");
+      });
+    },
+
     pool() {
       const topics = Array.from(document.querySelectorAll("input[name=topic]:checked")).map((c) => c.value);
       let pool = ALL.filter((q) => topics.includes(q.topic));
+      if (topics.includes("rechnen") && window.makeGenerated) pool = pool.concat(window.makeGenerated());
       if ($("#only-wrong").checked) {
         const stats = loadStats();
         pool = pool.filter((q) => stats[q.id] && stats[q.id].last === "wrong");
@@ -561,6 +579,7 @@
       $("#setup").classList.remove("hidden");
       const stats = loadStats();
       $("#wrong-count").textContent = Object.keys(stats).filter((k) => stats[k].last === "wrong").length;
+      App.renderProgress();
       App.updateCount();
       window.scrollTo(0, 0);
     });

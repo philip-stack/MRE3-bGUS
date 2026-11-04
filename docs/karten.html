@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Karteikarten – GUS Prüfungsvorbereitung</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">GUS <span>Prüfungsvorbereitung</span></a>
+      <nav class="topnav">
+        <a href="index.html">Skript</a>
+        <a href="quiz.html">Fragenkatalog</a>
+        <a href="karten.html" class="active">Karteikarten</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="breadcrumb">Geschäftsmodellentwicklung und Start-Up Management · Wiederholung</div>
+    <h1>Karteikarten</h1>
+  </div>
+
+  <main class="container">
+    <section id="k-setup" class="card setup">
+      <h2>Stapel zusammenstellen</h2>
+      <p class="muted">Frage lesen, Antwort im Kopf überlegen, aufdecken und ehrlich bewerten. Karten, die du nicht wusstest, kommen später im Stapel noch einmal. Das Ergebnis zählt auch für den Lernstand im Fragenkatalog.</p>
+      <fieldset>
+        <legend>Themen</legend>
+        <div id="k-topics"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Auswahl</legend>
+        <label><input type="radio" name="k-mode" value="all" checked> Alle Karten der gewählten Themen</label>
+        <label><input type="radio" name="k-mode" value="open"> Nur Karten, die noch nicht zuletzt richtig waren</label>
+      </fieldset>
+      <button class="btn" id="k-start" type="button">Los geht's</button>
+      <span class="muted small" style="margin-left:10px"><b id="k-count">0</b> Karten</span>
+    </section>
+
+    <section id="k-run" class="flash hidden">
+      <div class="flash-meta"><span id="k-pos"></span><span id="k-topic"></span></div>
+      <div class="flash-bar"><div id="k-bar"></div></div>
+      <div class="flash-card">
+        <div class="front" id="k-front"></div>
+        <div class="back hidden" id="k-back"></div>
+      </div>
+      <div class="flash-actions" id="k-show-row">
+        <button class="btn" id="k-show" type="button">Antwort zeigen <span class="kbd">Leertaste</span></button>
+      </div>
+      <div class="flash-actions hidden" id="k-rate-row">
+        <button class="btn btn-bad" id="k-no" type="button">Nicht gewusst <span class="kbd">1</span></button>
+        <button class="btn btn-ok" id="k-yes" type="button">Gewusst <span class="kbd">2</span></button>
+      </div>
+      <p style="text-align:center; margin-top:18px"><a href="#" id="k-stop">Stapel beenden</a></p>
+    </section>
+
+    <section id="k-done" class="card hidden">
+      <h2>Stapel geschafft</h2>
+      <p id="k-summary"></p>
+      <p><button class="btn" id="k-again" type="button">Neuer Stapel</button>
+         <a class="btn btn-outline" href="quiz.html">Zum Fragenkatalog</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">Lernhilfe auf Basis der LV-Unterlagen (Business Case, Strategisches Management, WKO-Gründungsleitfaden 2026). Ohne Gewähr.</footer>
+
+  <script src="assets/questions.js"></script>
+  <script src="assets/explanations.js"></script>
+  <script src="assets/generators.js"></script>
+  <script src="assets/karten.js"></script>
+</body>
+</html>
