@@ -457,12 +457,12 @@ window.QUESTIONS = [
     explain: "40.000 × (0,9091 + 0,8264 + 0,7513) = 40.000 × 2,4869 ≈ 99.474 €, abzüglich 100.000 € ergibt ≈ −526 €. Statisch wäre das ein Plus von 20.000 €, dynamisch ist die Investition knapp unvorteilhaft." },
 
   { id: "ke12", topic: "kennzahlen", type: "single",
-    q: "Ein Projekt hat bei einem Kalkulationszinssatz von 7,1 % einen NPV von +170.000 €. Was bedeutet das?",
+    q: "Ein Projekt hat bei einem Kalkulationszinssatz von 8 % einen NPV von +250.000 €. Was bedeutet das?",
     options: [
-      "Das Projekt erwirtschaftet über Mitteleinsatz und kalkulatorische Zinsen hinaus einen Überschuss (Barwert) von 170.000 €.",
-      "Das Projekt bringt einen Gewinn von 170.000 € im ersten Jahr.",
-      "Die Rendite des Projekts beträgt 7,1 %.",
-      "Das Projekt amortisiert sich in 1,7 Jahren.",
+      "Das Projekt erwirtschaftet über Mitteleinsatz und kalkulatorische Zinsen hinaus einen Überschuss (Barwert) von 250.000 €.",
+      "Das Projekt bringt einen Gewinn von 250.000 € im ersten Jahr.",
+      "Die Rendite des Projekts beträgt 8 %.",
+      "Das Projekt amortisiert sich in 2,5 Jahren.",
     ],
     answer: 0 },
 
