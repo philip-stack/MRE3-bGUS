@@ -314,3 +314,20 @@ a { color: var(--primary); }
 .pill { display: inline-block; padding: 1px 8px; border-radius: 999px; background: #e9ecef; font-size: 0.8rem; }
 
 footer.site-footer { text-align: center; color: var(--muted); font-size: 0.8rem; padding: 24px 16px 40px; }
+
+/* ---------- Handy: nichts breiter als der Bildschirm ---------- */
+.skript-layout > *, .quiz-layout > *, .grid-2 > *, .grid-3 > *, .que .content, .topnav { min-width: 0; }
+.skript table:not(.table-wrap table) { display: block; overflow-x: auto; }
+@media (max-width: 600px) {
+  .topbar-inner { gap: 12px; }
+  .brand span { display: none; }
+  .breadcrumb { overflow-wrap: anywhere; }
+  .page-header h1 { font-size: 1.45rem; }
+  .skript section { padding: 16px; }
+  .card { padding: 16px; }
+  .stat { font-size: 1.5rem; }
+  .match-table td { display: block; width: 100% !important; border-bottom: none; padding: 4px 0; }
+  .match-table tr { display: block; border-bottom: 1px solid #c9dade; padding: 6px 0; }
+  .match-table select { width: 100%; }
+  .formel { font-size: 0.82rem; }
+}
