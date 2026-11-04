@@ -15,7 +15,7 @@ sind realistische Planannahmen.
 | Investition | – | 250.000 € | **505.800 €** | 606.900 € | 450.000 € |
 | Kosten pro Jahr | 700.000 € | 611.000 € | **454.500 €** | 676.200 € | 254.400 € |
 | Beanstandete Teile beim Kunden | 100 ppm | 73 ppm | **47 ppm** | 67 ppm | 40 ppm |
-| Kapitalwert (NPV, 5 Jahre) | – | 111.200 € | **468.500 €** | −577.400 € | 1.365.000 € |
+| Kapitalwert (NPV, 5 Jahre) | – | 121.600 € | **496.500 €** | −574.800 € | 1.416.100 € |
 | Payback statisch | – | 3,0 Jahre | **2,3 Jahre** | > 5 Jahre | 1,2 Jahre |
 | ROI (Σ Nutzen / Σ Kosten) | – | 128 % | **164 %** | 70 % | 326 % |
 
@@ -60,7 +60,7 @@ rechnet sich durch die gesamte Datei durch.
 
 - Betrachtungszeitraum 5 Jahre, Vergleich jeweils gegen den Status quo
 - Steuern werden laut Vorgabe vernachlässigt (Steuersatz 0 %), lineare Abschreibung über 5 Jahre
-- Kalkulationszins 7,8 % (WACC, ohne Steuereffekt beim Fremdkapital)
+- Kalkulationszins 6,8 % (WACC; Eigenkapitalkosten 9,5 % nach CAPM: 3,0 % + (8 % − 3,0 %) × Beta 1,3)
 - Kennzahlen: Kapitalwert, interner Zinsfuß, Payback statisch und dynamisch,
   ROI als Σ Nutzen / Σ Kosten sowie als Rückflüsse / Investition
 - 24/7-Betrieb an 350 Tagen; Personalbedarf inklusive Reserve für Urlaub, Feiertage, Krankenstand und Schulung
