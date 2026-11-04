@@ -12,12 +12,12 @@ sind realistische Planannahmen.
 
 | | Status quo | Stationäre Kamera | **Roboter + ML** | Worst Case | Best Case |
 |---|---|---|---|---|---|
-| Investition | – | 250.000 € | **504.900 €** | 600.000 € | 450.000 € |
-| Kosten pro Jahr | 535.000 € | 490.300 € | **349.200 €** | 530.300 € | 219.800 € |
+| Investition | – | 250.000 € | **504.200 €** | 600.000 € | 450.000 € |
+| Kosten pro Jahr | 700.000 € | 611.000 € | **454.500 €** | 676.200 € | 254.400 € |
 | Beanstandete Teile beim Kunden | 100 ppm | 73 ppm | **47 ppm** | 67 ppm | 40 ppm |
-| Kapitalwert (NPV, 5 Jahre) | – | −60.100 € | **170.200 €** | −507.200 € | 641.800 € |
-| Payback statisch | – | > 5 Jahre | **3,2 Jahre** | > 5 Jahre | 1,8 Jahre |
-| ROI (Σ Nutzen / Σ Kosten) | – | 97 % | **143 %** | 61 % | 255 % |
+| Kapitalwert (NPV, 5 Jahre) | – | 111.200 € | **470.100 €** | −570.500 € | 1.365.000 € |
+| Payback statisch | – | 3,0 Jahre | **2,3 Jahre** | > 5 Jahre | 1,2 Jahre |
+| ROI (Σ Nutzen / Σ Kosten) | – | 128 % | **164 %** | 70 % | 326 % |
 
 **Empfehlung:** Investition in die robotergestützte Prüfzelle freigeben. Sie ist die einzige
 Variante, die die Kundenanforderungen für die E-Plattform (lückenlose Prüfdokumentation,
@@ -59,11 +59,11 @@ rechnet sich durch die gesamte Datei durch.
 **Methodik**
 
 - Betrachtungszeitraum 5 Jahre, Vergleich jeweils gegen den Status quo
-- Cashflows nach Steuern (23 % KöSt), lineare Abschreibung über 5 Jahre
-- Kalkulationszins 7,1 % (WACC mit Fremdkapitalzins nach Steuern)
+- Steuern werden laut Vorgabe vernachlässigt (Steuersatz 0 %), lineare Abschreibung über 5 Jahre
+- Kalkulationszins 7,8 % (WACC, ohne Steuereffekt beim Fremdkapital)
 - Kennzahlen: Kapitalwert, interner Zinsfuß, Payback statisch und dynamisch,
   ROI als Σ Nutzen / Σ Kosten sowie als Rückflüsse / Investition
-- Personalbedarf inklusive Reserve für Urlaub, Krankenstand und Schulung
+- 24/7-Betrieb an 350 Tagen; Personalbedarf inklusive Reserve für Urlaub, Feiertage, Krankenstand und Schulung
 - Qualität: 15 Reklamationen pro Jahr, davon 10 durch optische Oberflächenfehler. Nur diese
   kann die Prüfzelle verhindern; Maß-, Dichtheits- und Transportfehler bleiben unverändert
 - Berücksichtigt werden auch Doppelaufwand im Anlauf, Fehlalarme (Pseudoausschuss)
