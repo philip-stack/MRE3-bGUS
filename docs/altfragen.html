@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Altfragen – GUS Prüfungsvorbereitung</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">GUS <span>Prüfungsvorbereitung</span></a>
+      <nav class="topnav">
+        <a href="index.html">Skript</a>
+        <a href="quiz.html">Fragenkatalog</a>
+        <a href="karten.html">Karteikarten</a>
+        <a href="altfragen.html" class="active">Altfragen</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="breadcrumb">Geschäftsmodellentwicklung und Start-Up Management · Test</div>
+    <h1 id="attempt-title">Altfragen</h1>
+  </div>
+
+  <main class="container">
+    <!-- Einstellungen -->
+    <section id="setup" class="card setup">
+      <h2>Test starten</h2>
+      <p class="muted">Insgesamt <b id="total-count">0</b> Fragen im Stil der echten Prüfung: „Welche der nachfolgenden Aussagen sind richtig?“ mit vier Aussagen, von denen eine oder mehrere stimmen. Enthalten sind die 5 bekannten Altfragen und neue Fragen im selben Stil. Richtige Kreuze geben Teilpunkte, falsche Kreuze ziehen Punkte ab. Nach dem Prüfen steht zu jeder Aussage, warum sie richtig oder falsch ist.</p>
+
+      <fieldset>
+        <legend>Modus</legend>
+        <div class="inline-options">
+          <label><input type="radio" name="mode" id="mode-practice" value="practice" checked> Übungsmodus – Feedback sofort nach jeder Frage („Prüfen“)</label>
+          <label><input type="radio" name="mode" id="mode-exam" value="exam"> Prüfungssimulation – Zeitlimit, Auswertung erst am Ende</label>
+        </div>
+        <div id="exam-options" class="hidden" style="margin-top:10px">
+          <label>Anzahl Fragen: <input type="number" id="exam-n" value="28" min="5" max="28"></label>
+          <label>Zeit (Minuten): <input type="number" id="exam-min" value="30" min="5" max="240"></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Themen</legend>
+        <div id="topic-boxes"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Wiederholen</legend>
+        <label><input type="checkbox" id="only-wrong"> Nur Fragen, die zuletzt falsch oder nur teilweise richtig waren (<span id="wrong-count">0</span> gespeichert)</label>
+        <p class="small muted" style="margin:6px 0 0">Der Lernstand wird nur lokal in diesem Browser gespeichert. <a href="#" id="reset-stats">Lernstand zurücksetzen</a></p>
+      </fieldset>
+
+      <button class="btn" id="start-btn" type="button">Test jetzt starten</button>
+      <span class="muted small" style="margin-left:10px"><b id="pool-count">0</b> Fragen in der Auswahl</span>
+    </section>
+
+    <!-- Versuch -->
+    <section id="attempt" class="hidden">
+      <div class="quiz-layout">
+        <div>
+          <div id="questions"></div>
+          <div style="display:flex; justify-content:space-between; gap:10px">
+            <button class="btn btn-secondary" id="prev-btn" type="button">Vorherige Seite</button>
+            <button class="btn" id="next-btn" type="button">Nächste Seite</button>
+          </div>
+        </div>
+        <aside class="quiz-nav">
+          <h3>Test-Navigation</h3>
+          <div class="timer" id="timer"></div>
+          <div class="nav-grid" id="nav-grid"></div>
+          <div class="small muted" id="nav-score"></div>
+          <p style="margin:12px 0 0"><a href="#" onclick="App.showSummary(); return false;">Versuch beenden …</a></p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Zusammenfassung vor Abgabe -->
+    <section id="summary" class="card hidden">
+      <h2>Zusammenfassung des Versuchs</h2>
+      <table class="summary-table">
+        <thead><tr><th>Frage</th><th>Status</th></tr></thead>
+        <tbody id="summary-body"></tbody>
+      </table>
+      <p style="margin-top:16px"><button class="btn btn-secondary" id="back-to-attempt" type="button">Zurück zum Versuch</button></p>
+      <p class="muted small">Sobald Sie abgegeben haben, können Sie Ihre Antworten nicht mehr ändern.</p>
+      <button class="btn" id="submit-btn" type="button">Abgabe</button>
+    </section>
+
+    <!-- Ergebnis -->
+    <section id="result" class="card hidden">
+      <h2>Ergebnis</h2>
+      <div class="grid-2">
+        <div class="result-box">
+          <div class="muted">Bewertung</div>
+          <div id="result-pct" class="big"></div>
+          <div class="muted">Punkte: <span id="result-points"></span></div>
+        </div>
+        <div>
+          <table class="summary-table">
+            <thead><tr><th>Thema</th><th>Punkte</th><th>%</th><th></th></tr></thead>
+            <tbody id="result-topics"></tbody>
+          </table>
+        </div>
+      </div>
+      <p style="margin-top:18px">
+        <button class="btn" id="review-btn" type="button">Überprüfung ansehen</button>
+        <button class="btn btn-outline" id="new-btn" type="button">Neuer Versuch</button>
+      </p>
+      <p class="small muted">Tipp: Danach „Nur falsch beantwortete Fragen“ wählen und so lange wiederholen, bis die Liste leer ist.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">Lernhilfe auf Basis der LV-Unterlagen (Business Case, Strategisches Management, WKO-Gründungsleitfaden 2026). Ohne Gewähr.</footer>
+
+  <script src="assets/altfragen.js"></script>
+  <script src="assets/quiz.js"></script>
+</body>
+</html>

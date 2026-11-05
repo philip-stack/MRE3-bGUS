@@ -321,6 +321,9 @@ footer.site-footer { text-align: center; color: var(--muted); font-size: 0.8rem;
 @media (max-width: 600px) {
   .topbar-inner { gap: 12px; }
   .brand span { display: none; }
+  .topnav { gap: 0; }
+  .topnav a { padding: 16px 4px; font-size: 0.82rem; }
+  .topbar-inner { padding: 0 10px; gap: 8px; }
   .breadcrumb { overflow-wrap: anywhere; }
   .page-header h1 { font-size: 1.45rem; }
   .skript section { padding: 16px; }

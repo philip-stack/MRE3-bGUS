@@ -74,7 +74,8 @@ rechnet sich durch die gesamte Datei durch.
 ## Prüfungsvorbereitung (GitHub Pages)
 
 Lernskript und ein Fragenkatalog im Stil eines Moodle-Tests (266 Fragen,
-inkl. Rechenaufgaben) unter **https://philip-stack.github.io/MRE3-bGUS/**. Quellcode in `docs/`.
+inkl. Rechenaufgaben), Karteikarten und Altfragen im Original-Prüfungsstil (28 Fragen)
+unter **https://philip-stack.github.io/MRE3-bGUS/**. Quellcode in `docs/`.
 
 ## Autor
 
