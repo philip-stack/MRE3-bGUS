@@ -300,7 +300,7 @@
         const n = ALL.filter((q) => q.topic === key).length;
         const lbl = el("label");
         const cb = el("input", { type: "checkbox", name: "topic", value: key });
-        cb.checked = true;
+        cb.checked = !TOPICS[key].off;
         cb.addEventListener("change", () => this.updateCount());
         lbl.appendChild(cb);
         lbl.appendChild(document.createTextNode(" " + TOPICS[key].name + " "));

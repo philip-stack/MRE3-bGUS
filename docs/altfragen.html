@@ -28,7 +28,8 @@
     <!-- Einstellungen -->
     <section id="setup" class="card setup">
       <h2>Test starten</h2>
-      <p class="muted">Insgesamt <b id="total-count">0</b> Fragen im Stil der echten Prüfung: „Welche der nachfolgenden Aussagen sind richtig?“ mit vier Aussagen, von denen eine oder mehrere stimmen. Enthalten sind die 5 bekannten Altfragen und neue Fragen im selben Stil. Richtige Kreuze geben Teilpunkte, falsche Kreuze ziehen Punkte ab. Nach dem Prüfen steht zu jeder Aussage, warum sie richtig oder falsch ist.</p>
+      <p class="muted">Fragen im Stil der echten Prüfung: „Welche der nachfolgenden Aussagen sind richtig?“ mit vier Aussagen, von denen eine oder mehrere stimmen. Enthalten sind die 5 bekannten Altfragen und 23 neue Fragen im selben Stil. Richtige Kreuze geben Teilpunkte, falsche Kreuze ziehen Punkte ab. Nach dem Prüfen steht zu jeder Aussage, warum sie richtig oder falsch ist. Zusätzlich gibt es alle 112 Einzelaussagen als schnelles Wahr/Falsch-Training. Insgesamt: <b id="total-count">0</b> Fragen.</p>
+      <div class="merke">So werden Aussagen in den Altfragen falsch gemacht: Begriffe <b>vertauscht</b> (Formal- und Sachziel, Block- und rollierende Planung), die <b>falsche Ebene oder Rolle</b> genannt (Vorstand im Lower Management, Controlling genehmigt), die <b>falsche Größe</b> genannt (Buchwert statt Marktwert, Fremd- statt Eigenkapital, Aktiv- statt Passivseite) oder das <b>Gegenteil des Konzepts</b> behauptet (agil heißt unveränderbar). Lange, saubere Definitionen waren in den Altfragen immer richtig. Pro Frage stimmen ein bis drei Aussagen. Den Stoff dazu findest du im <a href="index.html#ziele">Skript, Kapitel 9</a>.</div>
 
       <fieldset>
         <legend>Modus</legend>
@@ -37,7 +38,7 @@
           <label><input type="radio" name="mode" id="mode-exam" value="exam"> Prüfungssimulation – Zeitlimit, Auswertung erst am Ende</label>
         </div>
         <div id="exam-options" class="hidden" style="margin-top:10px">
-          <label>Anzahl Fragen: <input type="number" id="exam-n" value="28" min="5" max="28"></label>
+          <label>Anzahl Fragen: <input type="number" id="exam-n" value="28" min="5" max="140"></label>
           <label>Zeit (Minuten): <input type="number" id="exam-min" value="30" min="5" max="240"></label>
         </div>
       </fieldset>

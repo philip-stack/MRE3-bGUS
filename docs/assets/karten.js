@@ -116,7 +116,7 @@
     Object.keys(TOPICS).forEach((key) => {
       const lbl = document.createElement("label");
       const cb = document.createElement("input");
-      cb.type = "checkbox"; cb.name = "k-topic"; cb.value = key; cb.checked = key !== "rechnen";
+      cb.type = "checkbox"; cb.name = "k-topic"; cb.value = key; cb.checked = key !== "rechnen" && !TOPICS[key].off;
       cb.addEventListener("change", updateCount);
       lbl.appendChild(cb);
       lbl.appendChild(document.createTextNode(" " + TOPICS[key].name));

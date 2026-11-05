@@ -4,10 +4,11 @@
 (function () {
   "use strict";
 
-  window.QUIZ_TOPICS = {
-    alt:   { name: "Originale Altfragen", short: "Altfragen", anchor: "" },
-    ziele: { name: "Neu: Ziele, Management & Planung", short: "Ziele & Planung", anchor: "" },
-    lv:    { name: "Neu: Strategie, Business Case, Kennzahlen & Gründung", short: "LV-Stoff", anchor: "strategie" },
+  const ALT_TOPICS = {
+    alt:      { name: "Originale Altfragen", short: "Altfragen", anchor: "ziele" },
+    ziele:    { name: "Neu: Ziele, Management & Planung", short: "Ziele & Planung", anchor: "ziele" },
+    lv:       { name: "Neu: Strategie, Business Case, Kennzahlen & Gründung", short: "LV-Stoff (Altfragenstil)", anchor: "strategie" },
+    aussagen: { name: "Einzelaussagen aller Altfragen als Wahr/Falsch (schnelles Durchklicken)", short: "Einzelaussagen", anchor: "ziele", off: true },
   };
 
   const Q = "Welche der nachfolgenden Aussagen sind richtig?";
@@ -300,7 +301,7 @@
     ]],
   ];
 
-  window.QUESTIONS = RAW.map(([id, topic, st]) => ({
+  const multi = RAW.map(([id, topic, st]) => ({
     id, topic, type: "multi", q: Q,
     options: st.map((s) => s[0]),
     answer: st.map((s, i) => (s[1] ? i : -1)).filter((i) => i >= 0),
@@ -308,4 +309,24 @@
       `<li><b>${s[1] ? "Richtig" : "Falsch"}:</b> ${s[0].length > 70 ? s[0].slice(0, 67).replace(/\s+\S*$/, "") + " …" : s[0]}<br><span class="muted">${s[2]}</span></li>`
     ).join("") + "</ul>",
   }));
+
+  // Jede Aussage einzeln als Wahr/Falsch-Frage
+  const single = [];
+  RAW.forEach(([id, topic, st]) => st.forEach((s, i) => single.push({
+    id: id + "_" + "abcd"[i], topic: "aussagen", type: "tf",
+    q: s[0] + (topic === "alt" ? ' <span class="muted small">(Altfrage)</span>' : ""),
+    answer: s[1], explain: s[2],
+  })));
+
+  const ALL = multi.concat(single);
+
+  if (window.QUESTIONS && window.QUIZ_TOPICS) {
+    // Fragenkatalog / Karteikarten: Altfragen als zusätzliche Themen anhängen
+    Object.assign(window.QUIZ_TOPICS, ALT_TOPICS);
+    ALL.forEach((q) => window.QUESTIONS.push(q));
+  } else {
+    // eigene Altfragen-Seite
+    window.QUIZ_TOPICS = ALT_TOPICS;
+    window.QUESTIONS = ALL;
+  }
 })();
